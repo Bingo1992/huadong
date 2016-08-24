@@ -16,14 +16,49 @@
         <div class="w-ban">
             <div class="fl">
                 <span class="logo-img icon-sprite"></span>
-                <span>一站式手机批发及通讯业务综合平台</span>
+                <span class="logo-text">一站式手机批发及通讯业务综合平台</span>
             </div>
-            <div class="fr">
+            <div class="fr right-info">
                 <a class="login-regist" href="login.html">登录</a>
                 <a class="login-regist" href="regist.html">注册账号</a>
-                <a class="user" href="#">
-                    <span></span>
-                </a>
+                <div class="user-nav">
+                    <a class="user" href="#">
+                        <i class="icon-my"></i>
+                    </a>
+                    <ul class="user-nav-list">
+                        <li>
+                            <a href="personnel.html">
+                                <i class="icon-my"></i>
+                                个人中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personnel.html">
+                                <i class="icon-order"></i>
+                                我的订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personnel.html">
+                                <i class="icon-statement"></i>
+                                往来对账订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personnel.html">
+                                <i class="icon-edit"></i>
+                                我的资料
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personnel.html">
+                                <i class="icon-coin"></i>
+                                我的佣金
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                    
             </div>
         </div>
     </div>
@@ -188,15 +223,42 @@
             <img src="images/girl.png"/>
             <p>有问题点我</p>
         </a>
-        <a class="share" href="">
-            <i class="icon-share"></i>
-            <p>分享到</p>
-        </a>
-        <a class="goTop" href=""><i class="icon-down"></i></a>
+        <div class="share-container">
+            <a class="share" href="">
+                <i class="icon-share"></i>
+                <p>分享到</p>
+            </a>
+            <div class="share-type">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon-qq"></i>
+                            <p>QQ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-weixin"></i>
+                            <p>微信</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-weibo"></i>
+                            <p>微博</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="right-triangle icon-sprite"></div>
+            </div>
+                
+        </div>
+            
+        <a class="goTop" href=""><i class="icon-up"></i></a>
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.js"></script>
-
+    <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript">
     $(function(){
         var $window = $(window),

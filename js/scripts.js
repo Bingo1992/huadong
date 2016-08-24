@@ -1,3 +1,23 @@
+// ----------------------首页---------------
+
+$(function(){
+    // 头部个人中心
+    $('.user-nav').hover(function(){
+        $('.user-nav-list').slideToggle(500);
+        $('.user').addClass('hover');
+    },function(){
+        $('.user-nav-list').hide();
+        $('.user').removeClass('hover');
+    });
+
+    //share
+    $('.share-container').hover(function(){
+        $('.share-type').fadeIn(500);
+    },function(){
+        $('.share-type').fadeOut(500); 
+    })
+})
+
 // -----------------返回顶部和底部刷新-----------------
 //获取滚动条当前的位置 
 function getScrollTop() {

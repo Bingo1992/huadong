@@ -2,3 +2,10 @@
 手机批发：wholesale.html
 空中充值：air_charge.html
 增值服务： appreciation.html
+
+
+我的订单-充值订单：order_recharge.html
+我的订单-批发订单：order_wholesale.html
+往来对账单：statement.html
+我的资料：my_data.html
+我的佣金：my_brokerage.html
