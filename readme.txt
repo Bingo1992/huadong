@@ -9,3 +9,6 @@
 往来对账单：statement.html
 我的资料：my_data.html
 我的佣金：my_brokerage.html
+
+
+推广中心：popularize_center.html

@@ -10,11 +10,22 @@ $(function(){
         $('.user').removeClass('hover');
     });
 
-    //share
+    // 移动业务
+    $('.mobile-charge').hover(function(){
+        $('.mobile-charge-list').show();
+    },function(){
+        $('.mobile-charge-list').hide();
+    })
+    //分享
     $('.share-container').hover(function(){
         $('.share-type').fadeIn(500);
     },function(){
         $('.share-type').fadeOut(500); 
+    });
+
+    // 隐藏客服
+    $('.customer-service').find('.icon-sprite').click(function(){
+        $('.customer-service').hide();
     })
 })
 
@@ -48,7 +59,7 @@ function getScrollHeight() {
 }
 
 window.onscroll = function() {
-    if (getScrollTop() > 180) {
+    if (getScrollTop() > 600) {
         $('.slideUp').addClass('show');
     } else {
         $('.slideUp').removeClass('show');
