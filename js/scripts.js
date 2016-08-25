@@ -10,9 +10,9 @@ $(function(){
 
     // 移动业务
     $('.mobile-charge').hover(function(){
-        $('.mobile-charge-list').slideToggle(500);
+        $('.mobile-charge-list').show();
     },function(){
-        $('.mobile-charge-list').slideToggle(500);
+        $('.mobile-charge-list').hide();
     })
     //分享
     $('.share-container').hover(function(){
@@ -31,7 +31,8 @@ $(function(){
             $('.bottom-calculate').addClass('hide');
             $('.empty-cart').removeClass('hide');
         }
-    })
+    });
+
 })
 
 // -----------------返回顶部-----------------

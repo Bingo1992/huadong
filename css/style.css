@@ -28,6 +28,7 @@ i{font-style: normal;}
 img {border: 0;}
 /*em,i {font-style: normal;}*/
 h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+h2{font-size: 24px;}
 h3{font-size: 20px;}
 h4{font-size: 18px;}
 h5{font-size: 16px;}
@@ -274,7 +275,7 @@ h6{font-size: 14px;}
 	height: 180px;
 	width: 300px;
 	box-sizing:border-box;
-	padding: 60px 20px;
+	padding: 50px 20px;
 }
 .tel-phone i{
 	font-size: 30px;
@@ -483,7 +484,7 @@ h6{font-size: 14px;}
 	line-height: 42px;
 	background-color: #e0e1e4;
 	padding: 0 14px;
-	position: fixed;
+	position: absolute;
 	z-index: 11;
 	width: 320px;
 	box-sizing:border-box;
@@ -862,6 +863,37 @@ h6{font-size: 14px;}
 }
 
 .ad-img {width: 280px;}
+
+/*-------------推广中心--------------*/
+.popularize-list{
+	margin-top: 30px;
+}
+.popularize-list li {
+	width: 380px;
+	float: left;
+	margin: 0 10px 20px 10px;
+	box-sizing:border-box;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #e0e3e6;
+	border-radius: 4px;
+}
+
+.popularize-list img {width: 100%;}
+.popularize-list h5{line-height: 24px;padding: 6px 0;}
+.popularize-list p {
+	color: #999;
+	line-height: 20px;
+}
+.font-time,.font-detail {
+	color: #ccc;
+	font-size: 12px;
+	margin-top: 6px;
+}
+.font-detail{
+	color: #159df3;
+	cursor: pointer;
+}
 /*-----最后-----*/
 .show {display: block;}
 .hide{display: none;}

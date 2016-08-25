@@ -12,6 +12,7 @@
 
 
 推广中心：popularize_center.html
+推广详情：popularize_detail.html
 
 ----移动业务----
 补换SIM卡： change_sim.html

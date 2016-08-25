@@ -30,40 +30,38 @@
                         <span class="amount">￥<span>5000.00</span></span>
                     </div>
                 </div>
-
                 <div class="user-nav">
                     <a class="user" href="#">
                         <i class="icon-my"></i>
                     </a>
-                    <ul class="user-nav-list">
+                    <ul class="user-nav-list js-hover">
                         <li>
                             <a href="personnel.html">
                                 <i class="icon-my"></i> 个人中心
                             </a>
                         </li>
                         <li>
-                            <a href="personnel.html">
+                            <a href="order_wholesale.html">
                                 <i class="icon-order"></i> 我的订单
                             </a>
                         </li>
                         <li>
-                            <a href="personnel.html">
+                            <a href="statement.html">
                                 <i class="icon-statement"></i> 往来对账订单
                             </a>
                         </li>
                         <li>
-                            <a href="personnel.html">
+                            <a href="my_data.html">
                                 <i class="icon-edit"></i> 我的资料
                             </a>
                         </li>
                         <li>
-                            <a href="personnel.html">
+                            <a href="my_brokerage.html">
                                 <i class="icon-coin"></i> 我的佣金
                             </a>
                         </li>
                     </ul>
                 </div>
-
                 <!-- 购物车 -->
                 <div class="cart-container" href="cart.html">
                     <div class="btn-cart">
@@ -72,27 +70,89 @@
                         <i class="icon-right"></i>
                         <span class="cart-num sprite">51</span>
                     </div>
-                    <div class="cart-box">
+                    <div class="cart-box js-hover">
                         <div class="cart-title">
                             <h5>购物车商品</h5>
                         </div>
+                        <!-- 购物车列表 -->
                         <ul class="cart-box-list">
                             <li>
                                 <div class="fl">
-                                    <a href="#">
-                                        <img src="images/mobile.jpg"/>
-                                        <p class="nowrap-3"></p>
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
                                     </a>
                                 </div>
-                                <div class="fr">
+                                <div class="fr cart-detail">
                                     <p class="label-wrong">￥<span>1900.00</span></p>
                                     <p>数量: <span>5</span></p>
-                                    <a href="#">删除</a>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                                <div class="t-clear">
+                                    <p class="label-sale"><span>满减</span>新上线活动，手机订货满10000立减少800</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>5</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>5</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>155</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                                <div class="t-clear">
+                                    <p class="label-sale"><span>满减</span>新上线活动，手机订货满10000立减少800</p>
                                 </div>
                             </li>
                         </ul>
+                        <!-- 购物车空时显示 -->
+                        <p class="empty-cart hide">
+                            购物车空空如也~~~
+                        </p>
+                        <!-- 购物车底部总计 -->
+                        <div class="bottom-calculate">
+                            <div class="fl">
+                                <p class="pro-num">共<span class="label-wrong">20</span>件商品</p>
+                                <p class="pro-cost">共计<span class="label-wrong">￥<span>500000.00</span></span>
+                                </p>
+                            </div>
+                            <div class="fr">
+                                <a class="btn">立即下订</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- 购物车  结束 -->
                 <a class="btn-balance btn" href="">余额充值</a>
             </div>
         </div>
@@ -307,8 +367,9 @@
                 <div class="right-triangle sprite"></div>
             </div> 
         </div>
+        <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
     </div>   
-    <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
+    
     <!-- 有问题点我 结束 -->
 
     <!-- 信息弹窗 -->
