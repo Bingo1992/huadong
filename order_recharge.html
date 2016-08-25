@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>个人中心</title>
+    <title>我的订单-充值订单</title>
     <link href="css/datouwang.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -15,7 +15,7 @@
     <div class="m-top clearfix">
         <div class="w-ban">
             <div class="fl">
-                <span class="logo-img icon-sprite"></span>
+                <span class="logo-img sprite"></span>
                 <span class="logo-text">一站式手机批发及通讯业务综合平台</span>
             </div>
             <div class="fr">
@@ -30,6 +30,7 @@
                         <span class="amount">￥<span>5000.00</span></span>
                     </div>
                 </div>
+
                 <div class="user-nav">
                     <a class="user" href="#">
                         <i class="icon-my"></i>
@@ -62,12 +63,36 @@
                         </li>
                     </ul>
                 </div>
-                <a class="btn-cart" href="cart.html">
-                    <i class="icon-shopping"></i>
-                    <span>我的购物车</span>
-                    <i class="icon-right"></i>
-                    <span class="cart-num">5</span>
-                </a>
+
+                <!-- 购物车 -->
+                <div class="cart-container" href="cart.html">
+                    <div class="btn-cart">
+                        <i class="icon-shopping"></i>
+                        <span>我的购物车</span>
+                        <i class="icon-right"></i>
+                        <span class="cart-num sprite">51</span>
+                    </div>
+                    <div class="cart-box">
+                        <div class="cart-title">
+                            <h5>购物车商品</h5>
+                        </div>
+                        <ul class="cart-box-list">
+                            <li>
+                                <div class="fl">
+                                    <a href="#">
+                                        <img src="images/mobile.jpg"/>
+                                        <p class="nowrap-3"></p>
+                                    </a>
+                                </div>
+                                <div class="fr">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>5</span></p>
+                                    <a href="#">删除</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <a class="btn-balance btn" href="">余额充值</a>
             </div>
         </div>
@@ -127,10 +152,13 @@
 
         <!-- 右侧订单 -->
         <div class="order">
-            <ul class="order-title">
-                <li><a href="order_wholesale.html">批发订单</a></li>
-                <li class="active"><a href="order_recharge.html">充值订单</a></li>
-            </ul>
+            <div class="order-title">
+                <ul>
+                    <li><a href="order_wholesale.html">批发订单</a></li>
+                    <li class="active"><a href="order_recharge.html">充值订单</a></li>
+                </ul>
+            </div>
+                
             <div class="clearfix">
                 <div class="fl">
                 </div>
@@ -243,17 +271,18 @@
     <!-- 底部 结束 -->
 
     <!-- 有问题点我 -->
+     <!-- 有问题点我 -->
     <div class="customer-service">
-        <a class="ask-girl" href="#">
-            <span class="sprite-cancel icon-sprite"></span>
-            <img src="images/girl.png" />
+        <div class="ask-girl">
+            <span class="sprite-cancel sprite"></span>
+            <img src="images/girl.png"/>
             <p>有问题点我</p>
-        </a>
+        </div>
         <div class="share-container">
-            <a class="share" href="">
+            <div class="share">
                 <i class="icon-share"></i>
                 <p>分享到</p>
-            </a>
+            </div>
             <div class="share-type">
                 <ul>
                     <li>
@@ -275,15 +304,15 @@
                         </a>
                     </li>
                 </ul>
-                <div class="right-triangle icon-sprite"></div>
-            </div>
+                <div class="right-triangle sprite"></div>
+            </div> 
         </div>
-        <a class="slideUp" href=""><i class="icon-up"></i></a>
-    </div>
+    </div>   
+    <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
     <!-- 有问题点我 结束 -->
 
     <!-- 信息弹窗 -->
-    <div class="ui-dialog">
+    <div class="ui-dialog hide">
         <div class="dialog-container">
             <h5>
                 <span>订单明细</span>

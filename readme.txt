@@ -12,3 +12,10 @@
 
 
 推广中心：popularize_center.html
+
+----移动业务----
+补换SIM卡： change_sim.html
+套餐办理：combo_manage.html
+实名登记：realName_regist.html
+自带卡优惠：self_card.html
+宽带报装：broadband_pack.html

@@ -1,20 +1,18 @@
 // ----------------------首页---------------
 
 $(function(){
-    // 头部个人中心
-    $('.user-nav').hover(function(){
-        $('.user-nav-list').slideToggle(500);
-        $('.user').addClass('hover');
+    // 头部个人中心,购物车
+    $('.user-nav').add('.cart-container').hover(function(){
+        $(this).find('.js-hover').show();
     },function(){
-        $('.user-nav-list').hide();
-        $('.user').removeClass('hover');
+        $('.js-hover').hide();
     });
 
     // 移动业务
     $('.mobile-charge').hover(function(){
-        $('.mobile-charge-list').show();
+        $('.mobile-charge-list').slideToggle(500);
     },function(){
-        $('.mobile-charge-list').hide();
+        $('.mobile-charge-list').slideToggle(500);
     })
     //分享
     $('.share-container').hover(function(){
@@ -23,13 +21,20 @@ $(function(){
         $('.share-type').fadeOut(500); 
     });
 
-    // 隐藏客服
-    $('.customer-service').find('.icon-sprite').click(function(){
-        $('.customer-service').hide();
+    //删除购物车内容
+    $('.cart-box-list').find('.delete').click(function(){
+        var $parent = $(this).parents('li');
+        var len = $('.cart-box-list li').length;
+        $parent.remove();
+        if(len == 1){
+            $('.cart-box-list').addClass('hide');
+            $('.bottom-calculate').addClass('hide');
+            $('.empty-cart').removeClass('hide');
+        }
     })
 })
 
-// -----------------返回顶部和底部刷新-----------------
+// -----------------返回顶部-----------------
 //获取滚动条当前的位置 
 function getScrollTop() {
     var scrollTop = 0;
@@ -41,29 +46,19 @@ function getScrollTop() {
     return scrollTop;
 }
 
-
-//获取当前可是范围的高度 
-function getClientHeight() {
-    var clientHeight = 0;
-    if (document.body.clientHeight && document.documentElement.clientHeight) {
-        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
-    } else {
-        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
-    }
-    return clientHeight;
-}
-
-//获取文档完整的高度 
-function getScrollHeight() {
-    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-}
-
 window.onscroll = function() {
-    if (getScrollTop() > 600) {
-        $('.slideUp').addClass('show');
+    if (getScrollTop() > 200) {
+        $('.slideUp').show();
+        $('.share').show();
+        // 隐藏客服
+        $('.customer-service').find('.sprite-cancel').click(function(){
+            $('.ask-girl').hide();
+        })
     } else {
-        $('.slideUp').removeClass('show');
+        $('.slideUp').hide();
+        $('.share').hide();
+
     }
 }
 
-// ------------------返回顶部和底部刷新结束---------------
+// ------------------返回顶部结束---------------
