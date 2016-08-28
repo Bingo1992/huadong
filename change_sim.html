@@ -3,9 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge"> -->
-    <title>推广详情</title>
-    <link href="css/datouwang.css" rel="stylesheet" type="text/css">
+    <title>移动业务-补换卡</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -167,26 +165,86 @@
             <li class="mobile-charge">
                 <a href="#">移动业务</a>
                 <ul class="mobile-charge-list">
-                    <li><a href="#">补换SIM卡</a></li>
-                    <li><a href="#">套餐办理</a></li>
-                    <li><a href="#">实名登记</a></li>
-                    <li><a href="#">自带卡优惠</a></li>
-                    <li><a href="#">宽带报装</a></li>
+                    <li><a href="change_sim.html">补换SIM卡</a></li>
+                    <li><a href="combo_manage.html">套餐办理</a></li>
+                    <li><a href="realName_regist.html">实名登记</a></li>
+                    <li><a href="self_card.html">自带卡优惠</a></li>
+                    <li><a href="broadband_pack.html">宽带报装</a></li>
                 </ul>
             </li>
             <li><a href="appreciation.html">增值服务</a></li>
         </ul>
     </div>
     <!-- 导航栏 结束 -->
-
-    <div class="w-ban clearfix">
-       <div class="white-container">
-           <img src="images/p2.jpg">
-           .
-       </div>
-
+    <div class="gray-container w-ban clearfix">
+       
+        <ul class="left-nav-2 fl">
+            <li class="active">
+                <a href="#">
+                    <i class="icon-new_ka"></i>
+                    <span>新卡开户</span>
+                </a>
+            </li>
+            <li>
+                <a href="change_sim.html">
+                    <i class="icon-change"></i>
+                    <span>补卡换卡</span>
+                </a>
+            </li>
+            <li>
+                <a href="combo_manage.html">
+                    <i class="icon-G"></i>
+                    <span>套餐办理</span>
+                </a>
+            </li>
+            <li>
+                <a href="realName_regist.html">
+                    <i class="icon-authentication"></i>
+                    <span>实名登记</span>
+                </a>
+            </li>
+            <li>
+                <a href="self_card.html">
+                    <i class="icon-Discount"></i>
+                    <span>自带卡优惠</span>
+                </a>
+            </li>
+            <li>
+                <a href="broadband_pack.html">
+                    <i class="icon-network"></i>
+                    <span>宽带报装</span>
+                </a>
+            </li>
+        </ul>
+        <div class="charge-container">
+            <div class="title-bar">
+                 <h5 class="fl">用户信息填写</h5>
+            </div>
+            <div class="input-form">
+                <div class="input-line">
+                    <label for="">手机号码</label>
+                    <div class="input-text">
+                        <input type="text" class="text2" placeholder="请输入手机号码">
+                        <div class="label-operator">
+                            <i class="icon-hooke_3"></i>
+                            <span>广州移动</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-line">
+                    <label for="">SIM卡号</label>
+                    <input type="text" class="text2" placeholder="请输入SIM卡号码">
+                </div>
+                <div class="input-line">
+                    <label for="">MSI号码</label>
+                    <input type="text" class="text2" placeholder="请输入MSI号码">
+                </div>
+            </div>
+            <div class="b-top">
+                <p class="btn btn-save">保存信息</p>
+            </div>
+        </div>
     </div>
-
     <!-- 底部 -->
     <div class="footer">
         <div class="w-ban">
@@ -281,10 +339,52 @@
         <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
     </div>
     <!-- 有问题点我 结束 -->
-
+    <!-- 信息弹窗 -->
+    <div class="ui-dialog">
+        <div class="dialog-container">
+            <h5>
+                <span>新增地址信息</span>
+                <span class="icon-error"></span>
+            </h5>
+            <div class="dialog-content">
+               <div class="input-form">
+                    <div class="input-line">
+                        <label for="">收货人</label>
+                        <input type="text" />
+                    </div>
+                   <div class="input-line">
+                        <label for="">所在地区</label>
+                        <!-- <div class="select"> -->
+                            <select>
+                                <option>请输入地区</option>
+                                <option>天河区</option>
+                            </select>
+                            <!-- <i class="icon-down"></i> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="input-line">
+                        <label for="">详细地址</label>
+                        <input type="text" class="text2" />
+                    </div>
+                    <div class="input-line fl">
+                        <label for="">手机号码</label>
+                        <input type="text" />
+                    </div>
+                    <div class="input-line">
+                        <label for="">固定电话</label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="b-top">
+                    <p class="btn btn-save">保存信息</p>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+    <!-- 信息弹窗结束  -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    
 </body>
 
 </html>

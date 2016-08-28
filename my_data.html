@@ -3,9 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge"> -->
-    <title>推广详情</title>
-    <link href="css/datouwang.css" rel="stylesheet" type="text/css">
+    <title>我的资料</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -167,26 +165,146 @@
             <li class="mobile-charge">
                 <a href="#">移动业务</a>
                 <ul class="mobile-charge-list">
-                    <li><a href="#">补换SIM卡</a></li>
-                    <li><a href="#">套餐办理</a></li>
-                    <li><a href="#">实名登记</a></li>
-                    <li><a href="#">自带卡优惠</a></li>
-                    <li><a href="#">宽带报装</a></li>
+                    <li><a href="change_sim.html">补换SIM卡</a></li>
+                    <li><a href="combo_manage.html">套餐办理</a></li>
+                    <li><a href="realName_regist.html">实名登记</a></li>
+                    <li><a href="self_card.html">自带卡优惠</a></li>
+                    <li><a href="broadband_pack.html">宽带报装</a></li>
                 </ul>
             </li>
             <li><a href="appreciation.html">增值服务</a></li>
         </ul>
     </div>
     <!-- 导航栏 结束 -->
-
     <div class="w-ban clearfix">
-       <div class="white-container">
-           <img src="images/p2.jpg">
-           .
-       </div>
-
+        <!-- 左侧导航 -->
+        <ul class="left-nav">
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-my"></i> 个人中心
+                </a>
+            </li>
+            <li>
+                <a href="order_wholesale.html">
+                    <i class="icon-order"></i> 我的订单
+                </a>
+            </li>
+            <li>
+                <a href="statement.html">
+                    <i class="icon-statement"></i> 往来对账订单
+                </a>
+            </li>
+            <li class="active">
+                <a href="my_data.html">
+                    <i class="icon-edit"></i> 我的资料
+                </a>
+            </li>
+            <li>
+                <a href="my_brokerage.html">
+                    <i class="icon-coin"></i> 我的佣金
+                </a>
+            </li>
+        </ul>
+        <!-- 左侧导航结束 -->
+        <!-- 右部信息 -->
+        <form class="white-container right-container">
+            <div class="data-title">
+                <h5>我的资料</h5>
+            </div>
+            <div class="input-form">
+                <div class="input-line">
+                    <label for="">店主名称</label>
+                    <input type="text" />
+                </div>
+                <div class="input-line">
+                    <label for="">店铺名称</label>
+                    <input type="text" class="text2" />
+                </div>
+                <div class="input-line fl">
+                    <label for="">手机号码</label>
+                    <input type="text" />
+                </div>
+                <div class="input-line">
+                    <label for="">固定电话</label>
+                    <input type="text" />
+                </div>
+                <div class="input-line">
+                    <label for="">店铺地区</label>
+                    <!-- <div class="select"> -->
+                        <select>
+                            <option>请输入地区</option>
+                            <option>天河区</option>
+                        </select>
+                        <!-- <i class="icon-down"></i> -->
+                    <!-- </div> -->
+                </div>
+                <div class="input-line">
+                    <label for="">详细地址</label>
+                    <input type="text" class="text2" />
+                </div>
+            </div>
+            <div class="data-title">
+                <h5 class="fl">物流信息</h5>
+                <p class="add-addr-info fr">新增物流信息</p>
+            </div>
+            <!-- 地址信息 -->
+            <ul class="address-info">
+                <li>
+                    <label class="checkbox">
+                        <input type="radio" name="address" checked>
+                        <i class="icon-hook_2"></i>
+                    </label>
+                    <div class="person-info">
+                        <p>张一凡</p>
+                        <p class="detail-addr">
+                            <span>广东省</span>
+                            <span>广州市</span>
+                            <span>天河区</span>
+                            <span>天府路307号</span>
+                        </p>
+                        <p>138001380000</p>
+                        <p class="default-addr">默认地址</p>
+                    </div>
+                </li>
+                <li>
+                    <label class="checkbox">
+                        <input type="radio" name="address">
+                        <i class="icon-hook_2"></i>
+                    </label>
+                    <div class="person-info">
+                        <p>张一凡</p>
+                        <p class="detail-addr">
+                            <span>广东省</span>
+                            <span>广州市</span>
+                            <span>天河区</span>
+                            <span>天府路307号</span>
+                        </p>
+                        <p>138001380000</p>
+                    </div>
+                </li>
+                <li>
+                    <label class="checkbox">
+                        <input type="radio" name="address">
+                        <i class="icon-hook_2"></i>
+                    </label>
+                    <div class="person-info">
+                        <p>张一凡</p>
+                        <p class="detail-addr">
+                            <span>广东省</span>
+                            <span>广州市</span>
+                            <span>天河区</span>
+                            <span>天府路307号</span>
+                        </p>
+                        <p>138001380000</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="btn-confirm">
+                <p class="btn btn-save">保存信息</p>
+            </div>
+        </form>
+        <!-- 右部信息 结束 -->
     </div>
-
     <!-- 底部 -->
     <div class="footer">
         <div class="w-ban">
@@ -281,10 +399,52 @@
         <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
     </div>
     <!-- 有问题点我 结束 -->
-
+    <!-- 信息弹窗 -->
+    <div class="ui-dialog">
+        <div class="dialog-container">
+            <h5>
+                <span>新增地址信息</span>
+                <span class="icon-error"></span>
+            </h5>
+            <div class="dialog-content">
+               <div class="input-form">
+                    <div class="input-line">
+                        <label for="">收货人</label>
+                        <input type="text" />
+                    </div>
+                   <div class="input-line">
+                        <label for="">所在地区</label>
+                        <!-- <div class="select"> -->
+                            <select>
+                                <option>请输入地区</option>
+                                <option>天河区</option>
+                            </select>
+                            <!-- <i class="icon-down"></i> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="input-line">
+                        <label for="">详细地址</label>
+                        <input type="text" class="text2" />
+                    </div>
+                    <div class="input-line fl">
+                        <label for="">手机号码</label>
+                        <input type="text" />
+                    </div>
+                    <div class="input-line">
+                        <label for="">固定电话</label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="b-top">
+                    <p class="btn btn-save">保存信息</p>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+    <!-- 信息弹窗结束  -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    
 </body>
 
 </html>
