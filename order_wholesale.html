@@ -214,8 +214,8 @@
         <div class="order">
             <div class="order-title">
                 <ul>
-                    <li><a href="order_wholesale.html">批发订单</a></li>
-                    <li class="active"><a href="order_recharge.html">充值订单</a></li>
+                    <li class="active"><a href="order_wholesale.html">批发订单</a></li>
+                    <li><a href="order_recharge.html">充值订单</a></li>
                 </ul>
             </div>
                 
@@ -235,61 +235,125 @@
                     <span class="label-sort">快速筛选</span>
                     <ul class="sort-btn">
                         <li class="active"><a href="#" class="btn-blue">全部</a></li>
-                        <li><a href="#" class="btn-blue">充值中</a></li>
-                        <li><a href="#" class="btn-blue">充值失败</a></li>
-                        <li><a href="#" class="btn-blue">充值完成</a></li>
+                        <li><a href="#" class="btn-blue">待确定</a></li>
+                        <li><a href="#" class="btn-blue">待付款</a></li>
+                        <li><a href="#" class="btn-blue">待发货</a></li>
+                        <li><a href="#" class="btn-blue">已完成</a></li>
                     </ul>
                 </div>
             </div>
             <table class="table">
+                <colgroup>
+                    <col style="width: 80px;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: 100px;">
+                    <col style="width: 80px;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>日期</th>
-                        <th>单据号</th>
-                        <th>电话号码</th>
-                        <th>订单类型</th>
-                        <th>充值面值（元）</th>
-                        <th>支付金额（元）</th>
-                        <th>到账面值（元）</th>
-                        <th>状态</th>
+                        <th>单据号/状态</th>
+                        <th>订单数量</th>
+                        <th>订单金额（元）</th>
+                        <th>确认数量</th>
+                        <th>确认金额（元）</th>
+                        <th>物流信息</th>
+                        <th>备注</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>2016.08.04 12:11:05</td>
-                        <td>201604030040022</td>
-                        <td>13800138000</td>
-                        <td>话费</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">110.00</td>
-                        <td class="label-warning">充值中</td>
+                        <td>
+                            <p>201604030040022</p>
+                            <p>
+                                <span class="label-warning">待确认</span>
+                                <span class="detail-info">订单详情</span>
+                            </p>
+                        </td>
+                        <td>10</td>
+                        <td class="label-wrong">45000.00</td>
+                        <td>未确认</td>
+                        <td>未确认</td>
+                        <td>未确认</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>2016.08.04 12:11:05</td>
-                        <td>201604030040022</td>
-                        <td>共<span class="label-wrong">10</span>个号码 <span class="detail-info">查看详情</span></td>
-                        <td>话费</td>
-                        <td class="label-wrong">1000.00</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">110.00</td>
-                        <td class="label-wrong">充值失败</td>
+                        <td>
+                            <p>201604030040022</p>
+                            <p>
+                                <span class="label-wrong">待付款</span>
+                                <span class="detail-info">订单详情</span>
+                            </p>
+                        </td>
+                        <td>10</td>
+                        <td class="label-wrong">45000.00</td>
+                        <td>10</td>
+                        <td class="label-wrong">450000.00</td>
+                        <td>未确认</td>
+                        <td></td>
+                        <td>
+                             <a class="btn">立刻支付</a>
+                             <div class="btn-cancel">取消订单</div>
+                        </td>
                     </tr>
                     <tr>
                         <td>2016.08.04 12:11:05</td>
-                        <td>201604030040022</td>
-                        <td>13800138000</td>
-                        <td>话费</td>
-                        <td class="label-wrong">1000.00</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">110.00</td>
-                        <td class="label-success">充值成功</td>
+                        <td>
+                            <p>201604030040022</p>
+                            <p>
+                                <span class="label-info">待发货</span>
+                                <span class="detail-info">订单详情</span>
+                            </p>
+                        </td>
+                        <td>10</td>
+                        <td class="label-wrong">45000.00</td>
+                        <td>10</td>
+                        <td class="label-wrong">45000.00</td>
+                        <td>未确认</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2016.08.04 12:11:05</td>
+                        <td>
+                            <p>201604030040022</p>
+                            <p>
+                                <span class="label-success">已完成</span>
+                                <span class="detail-info">订单详情</span>
+                            </p>
+                        </td>
+                        <td>10</td>
+                        <td class="label-wrong">45000.00</td>
+                        <td>10</td>
+                        <td class="label-wrong">45000.00</td>
+                        <td>顺丰035802935820</td>
+                        <td></td>
+                        <td>
+                            <a class="btn" >再次购买</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <!-- 右侧订单 结束 -->
     </div>
+
+    <!-- 分页 -->
+    <div class="page-conteiner">
+        <div class="tcdPageCode"></div>
+        <p class="totalPage">共<span></span>页</p>
+    </div>
+        
+    <!-- 分页结束 -->
 
     <!-- 底部 -->
     <div class="footer">
@@ -476,10 +540,49 @@
         </div> 
     </div>  
     <!-- 信息弹窗结束  -->
+
+    <!-- 是否取消订单弹窗 -->
+    <div class="confirm-dialog">
+        <div class="confirm-container">
+            <p>确定取消订单吗？</p>
+            <div class="two-btn">
+                <p class="confirm btn">确定</p>
+                <p class="cancel btn">取消</p>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/laydate.js"></script>
+    <script type="text/javascript" src="js/jquery.page.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    
+    <script type="text/javascript">
+
+    // 取消订单
+    $('.btn-cancel').click(function(){
+        var $parent = $(this).parents('tr');
+        $('.confirm-dialog').addClass('show');
+        $('.confirm-dialog .cancel').click(function(){
+            $('.confirm-dialog').removeClass('show');
+        });
+        $('.confirm-dialog .confirm').click(function(){
+            $('.confirm-dialog').removeClass('show');
+            $parent.remove();
+        });
+    });
+
+     var page = 20;//页数
+    $(".tcdPageCode").createPage({
+        pageCount: page,
+        current:1
+        // backFn:function(p){
+        //    $('.totalPage span').html(page);
+
+        // }
+    });
+     $('.totalPage span').html(page);
+
+    </script>
 </body>
 
 </html>

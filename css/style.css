@@ -310,9 +310,10 @@ h6{font-size: 14px;}
 
 .customer-service {
 	position: fixed;
-	right: 60px;
+	right: 40px;
 	bottom: 160px;
 	text-align: center;
+	display: none;
 }
 
 
@@ -337,7 +338,7 @@ h6{font-size: 14px;}
 
 .share,.slideUp {
 	position: fixed;
-	right: 80px;
+	right: 60px;
 	width: 60px;
 	height: 60px;
 	color: #fff;
@@ -399,7 +400,7 @@ h6{font-size: 14px;}
     background-color: #eb5345;
     text-align: center;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 2px;
     width: 80px;
     cursor: pointer;
 }
@@ -600,9 +601,34 @@ h6{font-size: 14px;}
 }
 .startTime,.endTime {
 	display: inline-block;
-	margin: 14px;
+	margin: 14px 6px;
 }
-/*------------订单-------------*/
+.calendar .btn-info {
+	display: inline-block;
+	background-color: #159df3;
+	width: auto;
+	padding: 0 20px;
+	border-radius: 2px;
+}
+.sort-btn {display: inline-block;}
+.sort-btn li {
+	float: left;
+	margin-top: 14px;
+	margin-left: 4px;
+}
+.sort-btn li.active a{
+	background-color: #159df3;
+	color: #fff;
+}
+.label-sort{
+	display: inline-block;
+    line-height: 32px;
+    margin-top: 14px;
+    margin-right: 6px;
+    float: left;
+}
+
+/*-订单-*/
 .order {
 	width: 1020px;
 	float: right;
@@ -650,9 +676,14 @@ h6{font-size: 14px;}
 	line-height: 50px;
 }
 .table td {
-	line-height: 80px;
+	height: 80px;
+	line-height: 24px;
 	color: #666;
 	padding: 0 10px;
+}
+.table td p span[class^="label"]{
+	padding-right: 6px;
+	font-size: 14px;
 }
 .detail-info {
 	padding: 3px 5px;
@@ -661,9 +692,15 @@ h6{font-size: 14px;}
 	border-radius: 2px;
 	cursor: pointer;
 }
+.table .btn-cancel{
+	color: #ccc;
+	cursor: pointer;
+	padding-top: 2px;
+}
+.table .btn {font-size: 14px;}
 
 /*弹窗*/
-.ui-dialog {
+.ui-dialog,.confirm-dialog {
 	position: fixed;
 	background-color: #000;
 	filter: Alpha(opacity=70);
@@ -710,9 +747,31 @@ h6{font-size: 14px;}
 	height: 400px;
 	overflow-y: auto;
 }
-.label-wrong,.table td.label-wrong {color: #eb5345;}
-.label-warning,.table td.label-warning{color: #fc8158;}
-.label-success,.table td.label-success{color: #6ec884;}
+.confirm-container {
+	width: 340px;
+	height: 124px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -62px 0 0 -170px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 20px;
+	line-height: 22px;
+	box-sizing: border-box;
+}
+.two-btn .btn{
+	display: inline-block;
+    margin: 20px 23px 0 23px;
+    width: 100px;
+}
+.two-btn .cancel {
+	background-color: #ccc;
+}
+.label-wrong{color: #eb5345 !important;}
+.label-warning{color: #fc8158 !important;}
+.label-success{color: #6ec884 !important;}
+.label-info{color: #75a9e5 !important;}
 
 .order-info li {
 	line-height: 50px;
@@ -728,6 +787,92 @@ h6{font-size: 14px;}
 .order-info span{
 	color: #666;
 }
+
+/*商品明细*/
+.product-detail {
+	margin: 20px;
+	/*border: 1px solid #e0e3e6;*/
+}
+.pro-title {
+	background-color: #a0cdeb;
+	height: 52px;
+	line-height: 52px;
+	color: #fff;
+	padding: 0 20px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.pro-table{width: 100%;}
+.pro-table thead {
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #c8cbcf;
+	box-sizing:border-box;
+	background-color: #f1f2f4;
+}
+.pro-table tbody td {
+	padding: 0 10px;
+	margin: 14px 0;
+}
+.pro-table tbody tr {
+	border-bottom: 1px solid #e0e3e6;
+}
+.pro-table .nowrap-3{
+	width: 250px;
+}
+
+/*--分页--*/
+.page-conteiner {
+	margin: 45px 0;
+	text-align:center;
+}
+.tcdPageCode{
+	text-align:center;
+	color: #ccc;
+	display: inline-block;
+}
+
+.tcdPageCode a{
+	display: inline-block;
+	height: 36px;	
+	line-height: 36px;	
+	padding: 0 12px;
+	border: 1px solid #ddd;	
+	margin: 0 4px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.tcdPageCode span{
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 12px;
+	margin: 0 4px;
+	background-color: #fff;
+}
+
+.tcdPageCode span.current,.tcdPageCode a:hover{
+	color: #fff;
+	background-color: #159df3;
+	border: 1px solid #159df3;
+}
+
+.tcdPageCode span.disabled{
+	color: #bfbfbf;
+/*	background: #f2f2f2;*/
+	border: 1px solid #bfbfbf;
+}
+.prevPage i,.disabled i,.nextPage i{
+	vertical-align: middle;
+	line-height: 36px;
+}
+.totalPage {
+	display: inline-block;
+	margin-left: 20px;
+	line-height: 36px;
+}
+/*分页结束*/
 
 /*--------------------个人中心---------------------*/
 .white-container {
@@ -945,13 +1090,14 @@ h6{font-size: 14px;}
 	cursor: pointer;
 }
 .add-addr-info,.btn-blue {
-	width: 100px;
+	padding: 0 14px;
 	height: 32px;
 	line-height: 32px;
 	color: #159df3;
 	border: 1px solid #159df3;
 	text-align: center;
 	border-radius: 2px;
+	display: inline-block;
 }
 
 .input-form {
@@ -1204,3 +1350,8 @@ input.text2 {
 /*-----最后-----*/
 .show {display: block;}
 .hide{display: none;}
+.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
