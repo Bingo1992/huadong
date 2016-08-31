@@ -313,7 +313,7 @@ h6{font-size: 14px;}
 	right: 40px;
 	bottom: 160px;
 	text-align: center;
-	display: none;
+	/*display: none;*/
 }
 
 
@@ -634,7 +634,7 @@ h6{font-size: 14px;}
 	float: right;
 	background-color: #fff;
 	border-radius: 6px;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .order-title {
 	position: relative;
@@ -1042,36 +1042,6 @@ h6{font-size: 14px;}
 
 .ad-img {width: 280px;}
 
-/*-------------推广中心--------------*/
-.popularize-list{
-	margin-top: 30px;
-}
-.popularize-list li {
-	width: 380px;
-	float: left;
-	margin: 0 10px 20px 10px;
-	box-sizing:border-box;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #e0e3e6;
-	border-radius: 4px;
-}
-
-.popularize-list img {width: 100%;}
-.popularize-list h5{line-height: 24px;padding: 6px 0;}
-.popularize-list p {
-	color: #999;
-	line-height: 20px;
-}
-.font-time,.font-detail {
-	color: #ccc;
-	font-size: 12px;
-	margin-top: 6px;
-}
-.font-detail{
-	color: #159df3;
-	cursor: pointer;
-}
 
 /*---------------我的资料-----------------*/
 .right-container  {
@@ -1227,6 +1197,38 @@ input.text2 {
 .b-top {
 	margin: -20px 0 20px 176px;
 }
+/*----------我的佣金----------------*/
+.my-brokerage {
+	width: 1020px;
+	background-color: #dde3e7;
+	overflow: hidden;
+	border: 1px solid #d2d8dc;
+	border-radius: 4px;
+	margin-top: 30px;
+	box-sizing: border-box;
+    float: right;
+    margin-bottom: -10px;
+}
+.my-brokerage .user-brokerage {
+	margin: 15px 0;
+	padding-left: 20px;
+}
+.brokerage-rule {
+	color: #159df3;
+	line-height: 80px;
+	padding-right: 20px;
+	float: right;
+}
+.brokerage-rule .help {
+	color: #fff;
+	background-color: #159df3;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	border-radius: 18px;
+	text-align: center;
+	display: inline-block;
+}
 
 /*------------空中充值-话费慢充-----*/
 .gray-container {
@@ -1275,17 +1277,16 @@ input.text2 {
 	background-position: -335px 0;
 	margin-right: 4px;
 }
-.tip-container {
-	margin: 40px 100px 100px 100px;
-}
+.tip-container {margin: 40px 100px 100px 100px;}
+.tip-container .tip {margin-bottom: 10px;}
 .tip-content {
 	background-color: #def1fc;
 	color: #6e9acc;
 	border: 1px solid #96bfee;
-	padding: 20px;
+	padding: 10px;
 	font-size: 12px;
 	line-height: 24px;
-	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .select-box {
 	display: inline-block;
@@ -1347,6 +1348,79 @@ input.text2 {
 	display: inline-block;
 	margin-right: 20px;
 }
+
+/*-------------推广中心--------------*/
+.popularize-list{
+	margin-top: 30px;
+}
+.popularize-list li {
+	width: 380px;
+	float: left;
+	margin: 0 10px 20px 10px;
+	box-sizing:border-box;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #e0e3e6;
+	border-radius: 4px;
+}
+
+.popularize-list img {width: 100%;}
+.popularize-list h5{line-height: 24px;padding: 6px 0;}
+.popularize-list p {
+	color: #999;
+	line-height: 20px;
+}
+.font-time,.font-detail {
+	color: #ccc;
+	font-size: 12px;
+	margin-top: 6px;
+}
+.font-detail{
+	color: #159df3;
+	cursor: pointer;
+}
+
+/*------------推广详情----------*/
+.popularize_detail {
+	margin: 30px 20px 0 0;
+	padding: 20px;
+}
+.popularize_detail .title-bar {
+	margin: 0;
+}
+.p-time-share {
+	height: 80px;
+	line-height: 80px;
+}
+.p-time p{
+	margin-right: 20px;
+	display: inline-block;
+}
+.p-share ul{
+	line-height: 20px;
+	color: #fff;
+	display: inline-block;
+}
+.p-share span {
+	display: block;
+	line-height: 80px;
+	float: left;
+}
+.p-share li{
+	display: inline-block;
+	margin: 16px 0 0 10px;
+	border-radius: 4px;
+}
+.p-share a {
+	width: 50px;
+	color: #fff;
+	display: block;
+	text-align: center;
+	padding: 4px 0;
+}
+.p-share li.qq{background-color: #3aa3fb;}
+.p-share li.weixin{background-color: #7fd077;}
+.p-share li.weibo{background-color: #fc8158;}
 /*-----最后-----*/
 .show {display: block;}
 .hide{display: none;}

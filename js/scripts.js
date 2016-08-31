@@ -1,3 +1,18 @@
+window.onload = function() {
+    // ----------判断页面是否出现滚动条来控制页脚位置-------------
+    if (document.documentElement.clientHeight > document.documentElement.offsetHeight) {
+        $('.footer').addClass('fixed');
+    } else {
+        $('.footer').removeClass('fixed');
+    }
+
+    // ------------左右高度一致---------
+    var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
+    var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
+    var mh = Math.max(hl, hr); //比较hl与hr的高度，并将最大值赋给变量mh
+    $(".left-nav-2").height(mh); //将left层高度设为最大高度mh  
+    $(".charge-container").height(mh); //将right层高度设为最大高度
+}
 // ----------------------首页---------------
 $(function() {
     // 头部个人中心,购物车
@@ -55,8 +70,13 @@ $(function() {
     // 点击激活active
     $('.sort-btn').find('li').click(function() {
         $(this).addClass('active').siblings().removeClass('active');
-    })
+    });
 
+
+// 隐藏客服
+        $('.customer-service').find('.sprite-cancel').click(function() {
+            $('.ask-girl').hide();
+        })
 
 })
 
@@ -77,19 +97,21 @@ window.onscroll = function() {
         $('.slideUp').show();
         $('.share').show();
         $('.customer-service').show();
-        // 隐藏客服
-        $('.customer-service').find('.sprite-cancel').click(function() {
-            $('.ask-girl').hide();
-        })
+       
     } else {
         $('.slideUp').hide();
         $('.share').hide();
 
     }
+
+     
 }
 
 // ------------------返回顶部结束---------------
-//日期范围限制
+
+
+
+//----------日期范围限制-------------------
     var start = {
         elem: '#start',
         format: 'YYYY-MM-DD hh:mm:ss',
@@ -116,18 +138,6 @@ window.onscroll = function() {
     laydate(start);
     laydate(end);
 
-window.onload = function() {
-    // ----------判断页面是否出现滚动条来控制页脚位置-------------
-    if (document.documentElement.clientHeight > document.documentElement.offsetHeight) {
-        $('.footer').addClass('fixed');
-    } else {
-        $('.footer').removeClass('fixed');
-    }
+// --------日期插件结束------------
 
-    // ------------左右高度一致---------
-    var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
-    var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
-    var mh = Math.max(hl, hr); //比较hl与hr的高度，并将最大值赋给变量mh
-    $(".left-nav-2").height(mh); //将left层高度设为最大高度mh  
-    $(".charge-container").height(mh); //将right层高度设为最大高度
-}
+
