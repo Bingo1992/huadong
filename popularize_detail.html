@@ -178,9 +178,9 @@
         </ul>
     </div>
     <!-- 导航栏 结束 -->
-
     <div class="w-ban clearfix">
-       <div class="popularize_detail white-container">
+        <!-- 左侧内容 -->
+        <div class="popularize_detail white-container">
             <div class="title-bar">
                 <h4>全国手机充值100元电信话费直充快充电信充值</h4>
             </div>
@@ -212,16 +212,34 @@
                         </li>
                     </ul>
                 </div>
-            </div>                  
+            </div>
             <div class="tip-content">
                 <p>温馨提示：广州银行为拓展信用卡业务，启动信用卡推广计划活动，注册账号分享相关信息给好友、朋友圈每开户一张卡、返佣50元。</p>
             </div>
-            
-       </div>
-
-       <div class="white-container">
-            <div class="title-bar-bg">
-                 <h5 class="fl">推广者信息</h5>
+            <img src="images/detail.jpg">
+            <div class="popularize_person">
+                <div class="title-bar-bg">
+                    <h5 class="fl">推广者信息</h5>
+                </div>
+                <div class="p-per-info">
+                    <div class="fl">
+                        <img class="user-logo" src="images/user.jpg">
+                        <div class="user-info">
+                            <h4>张三</h4>
+                            <div class="p-info">
+                                <i class="icon-phone"></i>
+                                <span>联系电话:<span>13488116112</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-addr-info">
+                        <h4>广州市幻想曲通讯白云万达店</h4>
+                        <div class="p-info">
+                            <i class="icon-add"></i>
+                            <span>联系地址:<span>广东省广州市白云区白云万达广场白云金街485号</span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <form action="#">
                 <div class="input-form">
@@ -229,14 +247,6 @@
                         <label for="">手机号码</label>
                         <div class="input-text">
                             <input class="mobile text2" type="text" placeholder="请输入手机号">
-                           <!--  <div class="label-operator">
-                                <i class="icon-hooke_3"></i>
-                                <span>广州移动</span>
-                            </div>
-                            <p class="input-wrong">
-                                <i class="icon-minus_2"></i>
-                                <span>请输入正确的手机号码</span>
-                            </p> -->
                         </div>
                     </div>
                     <div class="input-line">
@@ -257,7 +267,6 @@
                         <div class="label-tip">
                             <p>2016年乐享优惠</p>
                             <p class="label-text">即日起至2016年12月31日，充值100、200、300、500元乐享送话费，多充多送！</p>
-                            
                         </div>
                     </div>
                     <div class="input-line">
@@ -309,21 +318,62 @@
                     <div class="input-line">
                         <label for="">支付密码</label>
                         <div class="input-text">
-                             <input class="password text2" type="password" placeholder="请输入支付密码">
+                            <input class="password text2" type="password" placeholder="请输入支付密码">
                         </div>
                     </div>
                 </div>
-                 <div class="b-top">
-                    <input class="btn btn-recharge" type="button" value="立即充值"/>
+                <div class="b-top">
+                    <input class="btn btn-recharge" type="button" value="立即充值" />
                     <span class="label-wrong"><span class="sprite-tip sprite"></span>请仔细核对充值号码，充错号将无法退款</span>
                 </div>
             </form>
-               
-
+            <div class="p-share share-box">
+                <span>分享到：</span>
+                <ul>
+                    <li class="qq">
+                        <a href="#">
+                            <i class="icon-qq"></i>
+                            <p>QQ</p>
+                        </a>
+                    </li>
+                    <li class="weixin">
+                        <a href="#">
+                            <i class="icon-weixin"></i>
+                            <p>微信</p>
+                        </a>
+                    </li>
+                    <li class="weibo">
+                        <a href="#">
+                            <i class="icon-weibo"></i>
+                            <p>微博</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
+        <!-- 右侧内容 -->
+        <div class="activity-notice white-container">
+            <div class=" title-orange title-bar-bg">
+                <h6 class="fl">热门推广</h6>
+                <a class="fr" href="#">更多</a>
+            </div>
+            <ul>
+                <li>
+                    <img src="images/p3.jpg">
+                    <a class="title-a" href="#">话费、流量充值享特权优惠价</a>
+                    <p>本月新注册用户享有空中充值话费、流量优惠一次性充值100元或以上，享有随机立刻减优，最可减20元。</p>
+                    <a class="font-detail fr">查看详情</a>
+                </li>
+                <li>
+                    <img src="images/p4.jpg">
+                    <a class="title-a" href="#">话费、流量充值享特权优惠价</a>
+                    <p>本月新注册用户享有空中充值话费、流量优惠一次性充值100元或以上，享有随机立刻减优，最可减20元。</p>
+                    <a class="font-detail fr">查看详情</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
     <!-- 底部 -->
     <div class="footer">
         <div class="w-ban">
@@ -418,10 +468,10 @@
         <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
     </div>
     <!-- 有问题点我 结束 -->
-
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script type="text/javascript" src="js/validate-init.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    
 </body>
 
 </html>
