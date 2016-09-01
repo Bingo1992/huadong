@@ -81,6 +81,7 @@ $(function() {
     //选择套餐
     $('.js-select-mobile').find('li').click(function() {
         var index = $('.js-select-mobile li').index($(this));
+        // var $parent = $(this).parent('.js-select-mobile');
         $('.mobile-business').find('.o-box').eq(index).addClass('show').siblings('.o-box').removeClass('show');
     })
 

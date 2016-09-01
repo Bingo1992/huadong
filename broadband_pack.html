@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>移动业务-套餐办理</title>
+    <title>移动业务-宽带报装</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -191,7 +191,7 @@
                     <span>补卡换卡</span>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="combo_manage.html">
                     <i class="icon-G"></i>
                     <span>套餐办理</span>
@@ -209,7 +209,7 @@
                     <span>自带卡优惠</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="broadband_pack.html">
                     <i class="icon-network"></i>
                     <span>宽带报装</span>
@@ -217,11 +217,8 @@
             </li>
         </ul>
         <div class="charge-container">
-            <div class="order-title">
-                <ul>
-                    <li class="active"><a href="tel_fast_charging.html">流量套餐</a></li>
-                    <li><a href="tel_slow_charging.html">4G套餐</a></li>
-                </ul>
+            <div class="title-bar">
+                <h5 class="fl">实名信息填写</h5>
             </div>
 
             <form action="#">
@@ -240,79 +237,19 @@
                             </p> -->
                         </div>
                     </div>
-
                     <div class="input-line">
-                        <label for="">鉴权方式</label>
-                        <ul class="js-select-mobile select-box">
-                            <li class="active">
-                                <span>服务密码</span>
-                            </li>
-                            <li>
-                                <span>随机密码</span>
-                            </li>
-                        </ul>
-                        <ul class="mobile-business">
-                            <li class="o-box-1 o-box show">
-                                <span class="triangle-top"></span>
-                                <div class="input-line">
-                                    <input class="password-2" type="password" placeholder="请输入服务密码">
-                                  
-                                </div>
-                            </li>
-                            <li class="o-box">
-                                <span class="triangle-top-2"></span>
-                                <div class="input-line">
-                                    <input class="password-2" type="password" placeholder="请输入随机密码">
-                                    <button class="btn-getCode btn">发送验证码</button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                  
-                    <div class="input-line">
-                        <label for="">选择套餐</label>
-                        <ul class="select-box">
-                            <li class="active">
-                                <span>100元</span>
-                                <span class="sprice-select sprite"></span>
-                            </li>
-                            <li>
-                                <span>300元</span>
-                                <span class="sprice-select"></span>
-                            </li>
-                            <li>
-                                <span>50元</span>
-                                <span class="sprice-select"></span>
-                                <span class="sprite-hui sprite"></span>
-                            </li>
-                            <li>
-                                <span>30元</span>
-                                <span class="sprice-select"></span>
-                            </li>
-                            <li>
-                                <span>500元</span>
-                                <span class="sprice-select"></span>
-                            </li>
-                            <li>
-                                <span>200元</span>
-                                <span class="sprice-select"></span>
-                            </li>
-                            <li>
-                                <span>20元</span>
-                                <span class="sprice-select"></span>
-                            </li>
-                            <li>
-                                <span>10元</span>
-                                <span class="sprice-select"></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="combo-container">
-                        <h5>套餐内容</h5>
-                        <div class="combo-content">
-                            <p>套餐内当月未消费的剩余流量，可以结转至次月使用，结转流量次月月底失效。若您办理了套餐变更（含档位变更、变更回原套餐）、销号等业务，或者手机号码整月处于停机状态，当月剩余流量将无法结转。当月存在结转流量时，同一类型的流量优先扣减上月结转的剩余流量，再扣减套餐内流量。不同类型的流量，按照原有的扣费顺序扣减，计费规则不变。</p>
+                        <label for="">用户名</label>
+                        <div class="input-text">
+                            <input class="name" type="text" placeholder="请输入用户名">
                         </div>
                     </div>
+                    <div class="input-line">
+                        <label for="">身份证号</label>
+                        <div class="input-text">
+                            <input class="IDCard text2" type="text" placeholder="请输入身份证号">
+                        </div>
+                    </div>
+
                    <div class="input-line">
                         <label for="">交易密码</label>
                         <div class="input-text">

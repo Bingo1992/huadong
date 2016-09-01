@@ -25,3 +25,6 @@
 ---空中充值---
 话费慢充：tel_fast_charging.html
 话费慢充：tel_slow_charging.html
+
+流量充值： flow_charging.html
+流量批量充值：batch_flow_charging.html

@@ -1504,7 +1504,7 @@ li.o-box-1 {width: 420px !important;}
     left: 50px;
 }
 .triangle-top-2 {
-	left: 190px;
+	left: 180px;
 }
 .btn-getCode {
 	display: inline-block;
@@ -1548,6 +1548,7 @@ li.o-box-1 {width: 420px !important;}
 	margin-left: 80px;
 	width: 510px;
 	margin-top: -20px;
+	margin-bottom: 30px;
 }
 .combo-content {
 	margin: 10px 0;
