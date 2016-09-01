@@ -979,6 +979,7 @@ h6{font-size: 14px;}
 	display: block;
 	color: #159df3;
 }
+
 .title-bar-bg {
 	background-color: #a0cdeb;
 	color: #fff;
@@ -1019,8 +1020,16 @@ h6{font-size: 14px;}
 	width: 280px;
     box-sizing: border-box;
     margin-top: 30px;
+    float: right;
 }
 .title-green {background-color: #6ec884;}
+.title-orange{background-color: #fc8158;}
+.title-orange a{
+	color: #fff;
+    font-size: 12px;
+    line-height: 40px;
+    display: inline-block;
+}
 .activity-notice li {
 	border-bottom: 1px solid #e0e3e6;
 	padding: 16px 14px;
@@ -1028,14 +1037,16 @@ h6{font-size: 14px;}
 	color: #999;
 	font-size: 12px;
 	text-align: justify;
+	overflow: hidden;
 }
 .activity-notice li:last-child{border-bottom: none;}
-.activity-notice a {
+.title-a {
 	color: #333;
 	font-size: 16px;
 	line-height: 24px;
 }
-.activity-notice a:hover{
+
+.title-a:hover{
 	color: #75a9e5;
 	text-decoration: underline;
 }
@@ -1290,7 +1301,7 @@ input.text2 {
 }
 .select-box {
 	display: inline-block;
-	width: 600px;
+	width: 570px;
 	position: relative;
 }
 .select-box li {
@@ -1384,6 +1395,9 @@ input.text2 {
 .popularize_detail {
 	margin: 30px 20px 0 0;
 	padding: 20px;
+	width: 900px;
+	box-sizing: border-box;
+	float: left;
 }
 .popularize_detail .title-bar {
 	margin: 0;
@@ -1421,6 +1435,77 @@ input.text2 {
 .p-share li.qq{background-color: #3aa3fb;}
 .p-share li.weixin{background-color: #7fd077;}
 .p-share li.weibo{background-color: #fc8158;}
+.popularize_person {
+	border: 1px solid #e0e3e6;
+	border-top: none;
+	width: 100%;
+	/*padding: 10px;*/
+	box-sizing: border-box;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-bottom: 60px;
+	margin-top: 20px;
+}
+.p-per-info {padding: 10px 20px;overflow: hidden;}
+.p-per-info .fl {
+	border-right: 1px solid #e0e3e6;
+	padding-right: 40px
+}
+.p-addr-info {
+	padding-left: 20px;
+	float: left;
+	line-height: 24px;
+    margin-top: 16px;
+}
+.p-per-info .icon-phone,
+.p-per-info .icon-add  {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background-color: #6ec884;
+	border-radius: 2px;
+	font-size: 14px;
+}
+.p-per-info .icon-add {background-color: #f4bd6c;}
+.share-box{
+	border-top: 1px solid #e0e3e6;
+	margin-top: 80px;
+	padding-top: 10px;
+}
+
+/*---------------补卡换卡--------------*/
+.other-password {
+	margin-left: 80px;
+    width: 550px;
+    border: 1px solid #e0e3e6;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.other-password .input-line {margin-bottom: 0;}
+.other-password input {width: 362px;}
+.triangle-top {
+	background: url(../images/spuite_pic.png) no-repeat;
+	display: inline-block;
+	background-position: -36px 0;
+	width: 18px;
+	height: 10px;
+	position: absolute;
+    top: -9px;
+    left: 50px;
+}
+.btn-getCode {
+	display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    background-color: #159df3;
+    width: 120px;
+
+}
 /*-----最后-----*/
 .show {display: block;}
 .hide{display: none;}
