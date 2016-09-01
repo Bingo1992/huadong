@@ -20,6 +20,7 @@
 实名登记：realName_regist.html
 自带卡优惠：self_card.html
 宽带报装：broadband_pack.html
+新卡开户：new_card.html
 
 ---空中充值---
 话费慢充：tel_fast_charging.html

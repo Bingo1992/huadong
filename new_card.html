@@ -177,7 +177,6 @@
     </div>
     <!-- 导航栏 结束 -->
     <div class="gray-container w-ban clearfix">
-       
         <ul class="left-nav-2 fl">
             <li>
                 <a href="#">
@@ -218,25 +217,55 @@
         </ul>
         <div class="charge-container">
             <div class="title-bar">
-                 <h5 class="fl">用户信息填写</h5>
+                <h5 class="fl">开户信息填写</h5>
+            </div>
+            <div class="step clearfix">
+                <div class="step-logo">
+                    <span class="step-1"></span>
+                    <p>填写相应用户信息</p>
+                    <div class="line"></div>
+                </div>
+                <div class="step-logo">
+                    <span class="step-2"></span>
+                    <p>选择套餐档位</p>
+                    <div class="line"></div>
+                </div>
+                <div class="step-logo">
+                    <span class="step-3"></span>
+                    <p>点击提交申请并完成</p>
+                </div>
             </div>
             <div class="input-form">
                 <div class="input-line">
-                    <label for="">手机号码</label>
+                    <label for="">用户姓名</label>
                     <div class="input-text">
-                        <input type="text" class="text2" placeholder="请输入手机号码">
-                        <div class="label-operator">
-                            <i class="icon-hooke_3"></i>
-                            <span>广州移动</span>
-                        </div>
+                        <input type="text" placeholder="请输入用户姓名">
                     </div>
+                </div>
+                <div class="input-line">
+                    <label for="">身份证号</label>
+                    <div class="input-text">
+                        <input type="text" class="text2" placeholder="请输入16位身份证号码">
+                    </div>
+                </div>
+                <div class="input-line">
+                    <label for="">证件地址</label>
+                    <div class="input-text">
+                        <input type="text" class="text2" placeholder="请输入与身份证互相关联的地址">
+                    </div>
+                </div>
+                <div class="input-line">
+                    <label for="">选定号码</label>
+                    <div class="input-text">
+                        <input type="text" class="mobile text2" placeholder="请输入手机号码">
+                    </div>
+                    <span class="label-wrong">用户选择的号码</span>
                 </div>
                 <div class="input-line">
                     <label for="">SIM卡号</label>
                     <div class="input-text">
                         <input type="text" class="text2" placeholder="请输入SIM卡号码">
                     </div>
-                    
                 </div>
                 <div class="input-line">
                     <label for="">MSI号码</label>
@@ -245,21 +274,56 @@
                     </div>
                 </div>
                 <div class="input-line">
-                    <label for="">鉴权方式</label>
+                    <label for="">选择套餐</label>
                     <ul class="js-select-mobile select-box">
                         <li class="active">
-                            <span>服务密码</span>
+                            <span>语音套餐</span>
                         </li>
                         <li>
-                            <span>随机密码</span>
+                            <span>流量套餐</span>
                         </li>
                     </ul>
                     <ul class="mobile-business">
-                        <li class="o-box-1 o-box show">
+                        <li class="o-box show">
                             <span class="triangle-top"></span>
-                            <div class="input-line">
-                                <input class="password-2" type="password" placeholder="请输入服务密码">
-                              
+                            <ul class="select-box">
+                                <li class="active">
+                                    <span>100元</span>
+                                    <span class="sprice-select sprite"></span>
+                                </li>
+                                <li>
+                                    <span>300元</span>
+                                    <span class="sprice-select"></span>
+                                </li>
+                                <li>
+                                    <span>50元</span>
+                                    <span class="sprice-select"></span>
+                                    <span class="sprite-hui sprite"></span>
+                                </li>
+                                <li>
+                                    <span>30元</span>
+                                    <span class="sprice-select"></span>
+                                </li>
+                                <li>
+                                    <span>500元</span>
+                                    <span class="sprice-select"></span>
+                                </li>
+                                <li>
+                                    <span>200元</span>
+                                    <span class="sprice-select"></span>
+                                </li>
+                                <li>
+                                    <span>20元</span>
+                                    <span class="sprice-select"></span>
+                                </li>
+                                <li>
+                                    <span>10元</span>
+                                    <span class="sprice-select"></span>
+                                </li>
+                            </ul>
+                            <h5>套餐内容</h5>
+                            <div class="combo-content">
+                                <p>套餐内当月未消费的剩余流量，可以结转至次月使用，结转流量次月月底失效。若您办理了套餐变更（含档位变更、变更回原套餐）、销号等业务，或者手机号码整月处于停机状态，当月剩余流量将无法结转。当月存在结转流量时，同一类型的流量优先扣减上月结转的剩余流量，再扣减套餐内流量。不同类型的流量，按照原有的扣费顺序扣减，计费规则不变。</p>
                             </div>
                         </li>
                         <li class="o-box">
@@ -379,19 +443,19 @@
                 <span class="icon-error"></span>
             </h5>
             <div class="dialog-content">
-               <div class="input-form">
+                <div class="input-form">
                     <div class="input-line">
                         <label for="">收货人</label>
                         <input type="text" />
                     </div>
-                   <div class="input-line">
+                    <div class="input-line">
                         <label for="">所在地区</label>
                         <!-- <div class="select"> -->
-                            <select>
-                                <option>请输入地区</option>
-                                <option>天河区</option>
-                            </select>
-                            <!-- <i class="icon-down"></i> -->
+                        <select>
+                            <option>请输入地区</option>
+                            <option>天河区</option>
+                        </select>
+                        <!-- <i class="icon-down"></i> -->
                         <!-- </div> -->
                     </div>
                     <div class="input-line">
@@ -411,7 +475,6 @@
                     <p class="btn btn-save">保存信息</p>
                 </div>
             </div>
-                
         </div>
     </div>
     <!-- 信息弹窗结束  -->
@@ -420,9 +483,9 @@
     <script type="text/javascript" src="js/validate-init.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript">
-    $(function(){
-        //鉴权方式
-        $('.js-select-mobile').find('li').click(function(){
+    $(function() {
+        //选择套餐
+        $('.js-select-mobile').find('li').click(function() {
             var index = $('.js-select-mobile li').index($(this));
             $('.mobile-business').find('li').eq(index).addClass('show').siblings('li').removeClass('show');
         })
