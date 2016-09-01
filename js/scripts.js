@@ -73,10 +73,16 @@ $(function() {
     });
 
 
-// 隐藏客服
-        $('.customer-service').find('.sprite-cancel').click(function() {
-            $('.ask-girl').hide();
-        })
+    // 隐藏客服
+    $('.customer-service').find('.sprite-cancel').click(function() {
+        $('.ask-girl').hide();
+    });
+
+    //选择套餐
+    $('.js-select-mobile').find('li').click(function() {
+        var index = $('.js-select-mobile li').index($(this));
+        $('.mobile-business').find('.o-box').eq(index).addClass('show').siblings('.o-box').removeClass('show');
+    })
 
 })
 

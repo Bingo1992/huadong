@@ -27,7 +27,7 @@ $(function(){
      	}
      });
      // 提交按钮
-     $('.btn-recharge').click(function(){
+     $('.btn-recharge').add('.btn-save').click(function(){
      	$('.input-form :input').trigger('propertychange');
      })
 

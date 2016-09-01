@@ -1477,7 +1477,7 @@ input.text2 {
 }
 
 /*---------------补卡换卡--------------*/
-.mobile-business li.o-box{
+.mobile-business .o-box{
 	margin-left: 80px;
     width: 550px;
     border: 1px solid #e0e3e6;
@@ -1488,10 +1488,10 @@ input.text2 {
     position: relative;
     display: none;
 }
-.mobile-business li.o-box.show {display: block;}
+.mobile-business .o-box.show {display: block;}
 .mobile-business .input-line {margin-bottom: 0;}
 .mobile-business input {width: 380px;margin-right: 2px;}
-li.o-box-1 {width: 420px;}
+li.o-box-1 {width: 420px !important;}
 
 .triangle-top,.triangle-top-2 {
 	background: url(../images/spuite_pic.png) no-repeat;
@@ -1543,6 +1543,11 @@ li.o-box-1 {width: 420px;}
     margin-left: 120px;
     top: 18px;
     left: 5px;
+}
+.combo-container {
+	margin-left: 80px;
+	width: 510px;
+	margin-top: -20px;
 }
 .combo-content {
 	margin: 10px 0;
