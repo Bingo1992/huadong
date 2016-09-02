@@ -51,12 +51,15 @@ h6{font-size: 14px;}
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.nowrap-3 {
+.nowrap-2,.nowrap-3 {
   line-height: 18px;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.nowrap-3 {
+  -webkit-line-clamp: 3;
 }
 .w-ban {
 	width: 1200px;
@@ -192,6 +195,9 @@ h6{font-size: 14px;}
 	z-index: 5;
 	border: 1px solid #eee;
 	display: none;
+}
+.air-charge {
+	height: 112px;
 }
 .mobile-charge-list a{
 	display: block;
@@ -441,6 +447,7 @@ h6{font-size: 14px;}
     border-radius: 4px;
     position: relative;
     margin: 6px;
+    display: block;
 }
 .cart-container:hover {
 	background-color: #e0e1e4;
@@ -539,6 +546,7 @@ h6{font-size: 14px;}
 .label-sale {
 	color: #eb5345;
 	margin-top: 10px;
+	font-size: 12px;
 }
 .label-sale span {
 	color: #fff;
@@ -1557,6 +1565,89 @@ li.o-box-1 {width: 420px !important;}
 	background-color: #f1f2f4;
 	border-radius: 4px;
 	line-height: 24px;
+}
+
+/*------------------购物车----------------*/
+.cart-list {
+	width: 1200px;
+	margin: 30px auto;
+}
+.black-font{color: #333;}
+.cart-calculate .fl{
+	margin-left: 20px;
+}
+.cart-table {width: 100%;}
+.cart-table th {
+	height: 40px;
+	line-height: 40px;
+	background-color: #f1f2f4;
+	padding: 0 20px;
+	text-align: left;
+	border-bottom: 1px solid #e0e3e6;
+}
+.cart-table tr{border-bottom: 1px solid #e0e3e6;}
+.cart-table tr.checked {background-color: #def1fc;}
+.cart-table tr:last-child,
+.cart-list .data-title {border-bottom: none;}
+table .center {text-align: center;}
+.cart-table .checkbox {vertical-align: middle;}
+.cart-table td {padding: 20px;}
+.gray-font {
+	color: #999;
+	font-size: 12px;
+	line-height: 24px;
+}
+.cart-img {
+	margin-left: 10px;
+	vertical-align: middle;
+	width: 88px;
+	height: 88px;
+	box-sizing:border-box;
+	border: 1px solid #e0e3e6;
+}
+.all-check,.select-all {margin-right: 20px;}
+.minus, .plus {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #e9ebee;
+  border: 1px solid #e0e3e6;
+  color: #666;
+  width: 30px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+}
+.minus.disable {color: #ccc;pointer-events:none;}
+.count {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 6px;
+  text-align: center;
+  width: 40px;
+  border: 1px solid #e0e3e6;
+  display: inline-block;
+}
+
+.cart-bottom {
+	background-color: #dde3e7;
+	width: 1200px;
+	height: 60px;
+	line-height: 60px;
+	margin: 10px auto 30px auto;
+	border: 1px solid #e0e3e6;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 0 20px;
+	box-sizing:border-box;
+}
+
+.btn-calculate {
+	width: 100px;
+	margin-top: 14px;
 }
 /*-----最后-----*/
 .show {display: block;}

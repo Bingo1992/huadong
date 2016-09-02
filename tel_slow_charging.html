@@ -62,12 +62,12 @@
                 </div>
                 <!-- 购物车 -->
                 <div class="cart-container" href="cart.html">
-                    <div class="btn-cart">
+                    <a class="btn-cart" href="cart.html">
                         <i class="icon-shopping"></i>
                         <span>我的购物车</span>
                         <i class="icon-right"></i>
                         <span class="cart-num sprite">51</span>
-                    </div>
+                    </a>
                     <div class="cart-box js-hover">
                         <div class="cart-title">
                             <h5>购物车商品</h5>
@@ -161,7 +161,13 @@
         <ul class="w-ban">
             <li><a href="index.html">首页</a></li>
             <li><a href="wholesale.html">手机批发</a></li>
-            <li><a href="air_charge.html">空中充值</a></li>
+            <li class="mobile-charge">
+                <a href="#">空中充值</a>
+                <ul class="mobile-charge-list air-charge">
+                    <li><a href="tel_fast_charging.html">话费充值</a></li>
+                    <li><a href="flow_charging.html">流量充值</a></li>
+                </ul>
+            </li>
             <li class="mobile-charge">
                 <a href="#">移动业务</a>
                 <ul class="mobile-charge-list">
@@ -180,13 +186,13 @@
        
         <ul class="left-nav-2 fl">
             <li class="active">
-                <a href="#">
+                <a href="tel_fast_charging.html">
                     <i class="icon-mobile-phone"></i>
-                    <span>付费充值</span>
+                    <span>话费充值</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="flow_charging.html">
                     <i class="icon-signal"></i>
                     <span>流量充值</span>
                 </a>

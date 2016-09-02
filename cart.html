@@ -3,9 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>我的订单-充值订单</title>
-    <link href="css/datouwang.css" rel="stylesheet" type="text/css">
+    <title>购物车</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -64,12 +62,12 @@
                 </div>
                 <!-- 购物车 -->
                 <div class="cart-container" href="cart.html">
-                    <a class="btn-cart" href="cart.html">
+                    <div class="btn-cart">
                         <i class="icon-shopping"></i>
                         <span>我的购物车</span>
                         <i class="icon-right"></i>
                         <span class="cart-num sprite">51</span>
-                    </a>
+                    </div>
                     <div class="cart-box js-hover">
                         <div class="cart-title">
                             <h5>购物车商品</h5>
@@ -163,7 +161,13 @@
         <ul class="w-ban">
             <li><a href="index.html">首页</a></li>
             <li><a href="wholesale.html">手机批发</a></li>
-            <li><a href="air_charge.html">空中充值</a></li>
+            <li class="mobile-charge">
+                <a href="#">空中充值</a>
+                <ul class="mobile-charge-list air-charge">
+                    <li><a href="tel_fast_charging.html">话费充值</a></li>
+                    <li><a href="flow_charging.html">流量充值</a></li>
+                </ul>
+            </li>
             <li class="mobile-charge">
                 <a href="#">移动业务</a>
                 <ul class="mobile-charge-list">
@@ -178,119 +182,142 @@
         </ul>
     </div>
     <!-- 导航栏 结束 -->
-
-    <div class="w-ban clearfix">
-        <!-- 左侧导航 -->
-        <ul class="left-nav">
-            <li>
-                <a href="personnel.html">
-                    <i class="icon-my"></i> 个人中心
-                </a>
-            </li>
-            <li class="active">
-                <a href="order_wholesale.html">
-                    <i class="icon-order"></i> 我的订单
-                </a>
-            </li>
-            <li>
-                <a href="statement.html">
-                    <i class="icon-statement"></i> 往来对账订单
-                </a>
-            </li>
-            <li>
-                <a href="my_data.html">
-                    <i class="icon-edit"></i> 我的资料
-                </a>
-            </li>
-            <li>
-                <a href="my_brokerage.html">
-                    <i class="icon-coin"></i> 我的佣金
-                </a>
-            </li>
-        </ul>
-        <!-- 左侧导航结束 -->
-
-        <!-- 右侧订单 -->
-        <div class="order">
-            <div class="order-title">
-                <ul>
-                    <li><a href="order_wholesale.html">批发订单</a></li>
-                    <li class="active"><a href="order_recharge.html">充值订单</a></li>
-                </ul>
+    
+    <!-- 购物车表 -->
+    <div class="white-container cart-list">
+       <!--  <div class="cart-title">
+            <div class="fl"></div>
+        </div> -->
+        <div class="data-title">
+            <h5 class="fl">我的购物车</h5>
+            <div class="fr cart-calculate">
+                <p class="fl black-font">已选<span class="label-wrong">2</span>件商品</p>
+                <p class="label-wrong fl">￥<span>2908.00</span></p>
+                <div class="btn fl">结算</div>
             </div>
-                
-            <div class="calendar clearfix">
-                <div class="fl">
-                   <!-- 日期 -->
-                    <div class="startTime">
-                        <input  class="inline laydate-icon" id="start" placeholder="选择开始时间" readonly />
-                    </div>
-                    <span>至</span>
-                    <div class="endTime">
-                        <input type="text"  class="inline laydate-icon" id="end"  placeholder="选择结束时间" readonly/>
-                    </div>
-                    <div class="btn-info btn">查询</div>
-                </div>
-                <div class="fr">
-                    <span class="label-sort">快速筛选</span>
-                    <ul class="sort-btn">
-                        <li class="active"><a href="#" class="btn-blue">全部</a></li>
-                        <li><a href="#" class="btn-blue">充值中</a></li>
-                        <li><a href="#" class="btn-blue">充值失败</a></li>
-                        <li><a href="#" class="btn-blue">充值完成</a></li>
-                    </ul>
-                </div>
-            </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>日期</th>
-                        <th>单据号</th>
-                        <th>电话号码</th>
-                        <th>订单类型</th>
-                        <th>充值面值（元）</th>
-                        <th>支付金额（元）</th>
-                        <th>到账面值（元）</th>
-                        <th>状态</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2016.08.04 12:11:05</td>
-                        <td>201604030040022</td>
-                        <td>13800138000</td>
-                        <td>话费</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">110.00</td>
-                        <td class="label-warning">充值中</td>
-                    </tr>
-                    <tr>
-                        <td>2016.08.04 12:11:05</td>
-                        <td>201604030040022</td>
-                        <td>共<span class="label-wrong">10</span>个号码 <span class="detail-info">查看详情</span></td>
-                        <td>话费</td>
-                        <td class="label-wrong">1000.00</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">110.00</td>
-                        <td class="label-wrong">充值失败</td>
-                    </tr>
-                    <tr>
-                        <td>2016.08.04 12:11:05</td>
-                        <td>201604030040022</td>
-                        <td>13800138000</td>
-                        <td>话费</td>
-                        <td class="label-wrong">1000.00</td>
-                        <td class="label-wrong">100.00</td>
-                        <td class="label-wrong">110.00</td>
-                        <td class="label-success">充值成功</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
-        <!-- 右侧订单 结束 -->
+
+        <table class="cart-table">
+            <colgroup>
+                    <col style="width: 170px;">
+                    <col style="width: 330px;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                    <col style="width: auto;">
+                </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <label class="all-check">
+                            <div class="checkbox">
+                                <input type="checkbox" />
+                                <i class="icon-hook_2"></i>
+                            </div>
+                            全选
+                        </label>
+                    </th>
+                    <th>商品信息</th>
+                    <th>单价</th>
+                    <th class="center">数量</th>
+                    <th class="center">金额</th>
+                    <th class="center">操作</th>
+                </tr>
+                    
+            </thead>
+            <tbody class="check-list">
+                <tr>
+                    <td>
+                       <label>
+                            <div class="checkbox">
+                                <input type="checkbox" />
+                                <i class="icon-hook_2"></i>
+                            </div>
+                        </label> 
+                        <img class="cart-img" src="images/cart.jpg" />
+
+                    </td>
+                    <td>
+                        <span class="nowrap-2">荣耀7 (PLK-CL00) 3GB+16GB内存版  电信4G双卡双待双通 <span class="label-warning">典雅灰</span></span>
+                        <div class="t-clear">
+                            <p class="label-sale"><span>满减</span>新上线活动，手机订货满10000立减少800</p>
+                        </div>
+                    </td>
+                    <td>
+                        <p>批发价：<span class="label-wrong">￥<span>1499.00</span></span></p>
+                        <p class="gray-font">零售价：￥<span>1699.00</span></p>
+                    </td>
+                    <td class="center">
+                        <div class="amount">
+                            <span class="minus icon-jian"></span>
+                            <input type="text" class="count" value="1">
+                            <span class="plus icon-plus_2"></span>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <span class="label-wrong">￥<span>1499.00</span></span>
+                    </td>
+                    <td class="gray-font center"><span>移除</span></td>
+                </tr>
+                <tr>
+                    <td>
+                       <label>
+                            <div class="checkbox">
+                                <input type="checkbox" />
+                                <i class="icon-hook_2"></i>
+                            </div>
+                        </label> 
+                        <img class="cart-img" src="images/cart.jpg" />
+
+                    </td>
+                    <td>
+                        <span class="nowrap-2">荣耀7 (PLK-CL00) 3GB+16GB内存版  电信4G双卡双待双通荣耀7 (PLK-CL00) 3GB+16GB内存版  电信4G双卡双待双通 <span class="label-warning">典雅灰</span></span>
+                        <div class="t-clear">
+                            <p class="label-sale"><span>满减</span>新上线活动，手机订货满10000立减少800</p>
+                        </div>
+                    </td>
+                    <td>
+                        <p>批发价：<span class="label-wrong">￥<span>1499.00</span></span></p>
+                        <p class="gray-font">零售价：￥<span>1699.00</span></p>
+                    </td>
+                    <td class="center">
+                        <div class="amount">
+                            <span class="minus icon-jian"></span>
+                            <input type="text" class="count" value="2">
+                            <span class="plus icon-plus_2"></span>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <span class="label-wrong">￥<span>1499.00</span></span>
+                    </td>
+                    <td class="gray-font center"><span>移除</span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
+     <div class="cart-bottom">
+        <div class="fl">
+            <label class="select-all">
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <i class="icon-hook_2"></i>
+                </div>
+                全选
+            </label>
+            <span class="gray-font">移除</span>
+        </div>
+        <div class="fr cart-calculate">
+            <p class="fl black-font">已选<span class="label-wrong">2</span>件商品</p>
+            <p class="label-wrong fl">￥<span>2908.00</span></p>
+            <div class="btn btn-calculate fl">结算</div>
+        </div>
+    </div>
+
+    <div class="w-ban">
+        <img src="images/cartBan.jpg" alt="" />
+    </div>
+    
     <!-- 底部 -->
     <div class="footer">
         <div class="w-ban">
@@ -346,13 +373,11 @@
         </div>
     </div>
     <!-- 底部 结束 -->
-
     <!-- 有问题点我 -->
-     <!-- 有问题点我 -->
     <div class="customer-service">
         <div class="ask-girl">
             <span class="sprite-cancel sprite"></span>
-            <img src="images/girl.png"/>
+            <img src="images/girl.png" />
             <p>有问题点我</p>
         </div>
         <div class="share-container">
@@ -382,104 +407,16 @@
                     </li>
                 </ul>
                 <div class="right-triangle sprite"></div>
-            </div> 
+            </div>
         </div>
         <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
-    </div>   
-    
+    </div>
     <!-- 有问题点我 结束 -->
-
-    <!-- 信息弹窗 -->
-    <div class="ui-dialog">
-        <div class="dialog-container">
-            <h5>
-                <span>订单明细</span>
-                <span class="icon-error"></span>
-            </h5>
-            <div class="dialog-content">
-                <ul class="order-info">
-                    <li class="fl" style="padding-right:200px;">
-                        <label>收货人姓名</label>
-                        <span>张一凡</span>
-                    </li>
-                    <li>
-                        <label>联系电话</label>
-                        <span>13800138000</span>
-                    </li>
-                    <li>
-                        <label>收货地址</label>
-                        <span>广东省广州市天河区天府路307号3-4楼</span>
-                    </li>
-                    <li>
-                        <label>订单总计(元)</label>
-                        <span>45000.00</span>
-                    </li>
-                    <li>
-                        <label>物流信息</label>
-                        <span>顺丰 049230942342</span>
-                    </li>
-                    <li>
-                        <label>订单日期</label>
-                        <span>2016.08.10 12:40:03</span>
-                    </li>
-                    <li>
-                        <label>订单状态</label>
-                        <span class="label-wrong">待付款</span>
-                    </li>
-                </ul>
-
-                <div class="product-detail">
-                    <div class="pro-title">
-                        <p>商品明细</p>
-                    </div>
-                    <table class="pro-table">
-                        <thead>
-                            <tr>
-                                <th>商品信息</th>
-                                <th>商品单价（元）</th>
-                                <th>订货数量</th>
-                                <th>订货金额（元）</th>
-                                <th>确认数量</th>
-                                <th>确认金额（元）</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                             <tr>
-                                <td class="nowrap-3">荣耀7 (PLK-CL00)3GB+16GB内存版 电信4G双卡双待双通 <span class="label-warning">典雅灰</span> 荣耀7 (PLK-CL00) 3GB</td>
-                                <td class="label-wrong">1499.00</td>
-                                <td>10</td>
-                                <td class="label-wrong">14990.00</td>
-                                <td>10</td>
-                                <td class="label-wrong">14990.00</td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap-3">荣耀7 (PLK-CL00)3GB+16GB内存版 电信4G双卡双待双通 <span class="label-warning">典雅灰</span> 荣耀7 (PLK-CL00) 3GB+16GB内存版+16GB内存版</td>
-                                <td class="label-wrong">1499.00</td>
-                                <td>10</td>
-                                <td class="label-wrong">14990.00</td>
-                                <td>10</td>
-                                <td class="label-wrong">14990.00</td>
-                            </tr>
-                            <tr>
-                                <td class="nowrap-3">荣耀7 (PLK-CL00)3GB+16GB内存版 电信4G双卡双待双通 <span class="label-warning">典雅灰</span> 荣耀7 (PLK-CL00) 3GB</td>
-                                <td class="label-wrong">1499.00</td>
-                                <td>10</td>
-                                <td class="label-wrong">14990.00</td>
-                                <td>10</td>
-                                <td class="label-wrong">14990.00</td>
-                            </tr>
-                        </tbody>   
-                            
-                    </table>
-                </div>
-            </div> 
-        </div> 
-    </div>  
-    <!-- 信息弹窗结束  -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/laydate.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
     
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script type="text/javascript" src="js/validate-init.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 
 </html>

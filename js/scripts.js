@@ -5,7 +5,7 @@ window.onload = function() {
     } else {
         $('.footer').removeClass('fixed');
     }
-
+   
     // ------------左右高度一致---------
     var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
     var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
@@ -24,9 +24,9 @@ $(function() {
 
     // 移动业务
     $('.mobile-charge').hover(function() {
-            $('.mobile-charge-list').show();
+            $(this).find('.mobile-charge-list').show();
         }, function() {
-            $('.mobile-charge-list').hide();
+            $(this).find('.mobile-charge-list').hide();
         })
         //分享
     $('.share-container').hover(function() {
@@ -83,7 +83,84 @@ $(function() {
         var index = $('.js-select-mobile li').index($(this));
         // var $parent = $(this).parent('.js-select-mobile');
         $('.mobile-business').find('.o-box').eq(index).addClass('show').siblings('.o-box').removeClass('show');
-    })
+    });
+
+
+    // ---------------------------购物车页面-----------------------
+    minus_plus();
+    allCheck();
+
+     //购物车数量加减
+    function minus_plus(){
+        var count = 1;
+        $('.minus').on('click',function(){
+            var $parent = $(this).parent('.amount');
+            var $count = $parent.find('.count');
+            count = $count.val(); //每次点击前先获取input的值
+            if(count<=1){
+                $(this).addClass('disable');
+                return;
+            }
+            $count.val(--count);
+        });
+
+        $('.plus').on('click',function(){  
+            var $parent = $(this).parent('.amount');
+            var $count = $parent.find('.count');
+            count = $count.val(); //每次点击前先获取input的值
+            $count.val(++count);
+            $('.minus').removeClass('disable');
+        });
+
+        $('.count').change(function (){
+            if($(this).val()==0){
+                alert('数量不能为0');
+                $(this).siblings('.minus').addClass('disable');
+                $(this).val(1);
+            }
+        });
+    }
+    
+    function allCheck(){
+        //全选
+        $('.all-check').add('.select-all').click(function(){ 
+            var check = $(this).find(":checkbox").prop("checked");
+            if(check == false){
+                $(".check-list :checkbox").prop("checked", false); 
+                $(".all-check :checkbox").prop("checked", false);
+                $(".select-all :checkbox").prop("checked", false);  
+            }else{
+                $(".check-list :checkbox").prop("checked", true); 
+                $(".all-check :checkbox").prop("checked", true); 
+                $(".select-all :checkbox").prop("checked", true); 
+            }            
+        });
+
+        //单选某个商品时，若列表中有未勾选的商品，则取消全选按钮的选中状态
+        $(".check-list :checkbox").click(function(){
+            var flag = 0;
+            //遍历每个商品
+            $(".check-list :checkbox").each(function(i){
+                var check = $(".check-list :checkbox").eq(i).prop("checked");
+                if(check == false){
+                    flag++;
+                    $(this).parents('tr').removeClass('checked');
+                }else {
+                    $(this).parents('tr').addClass('checked');
+                }
+            });
+
+            if(flag>=1){
+                $(".all-check :checkbox").prop("checked", false);
+                $(".select-all :checkbox").prop("checked", false); 
+            }else {     
+                $(".all-check :checkbox").prop("checked", true); 
+                $(".select-all :checkbox").prop("checked", true); 
+            }
+        });
+    }
+    // ---------------------------购物车页面--结束---------------------
+
 
 })
 

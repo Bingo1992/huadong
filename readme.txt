@@ -23,7 +23,7 @@
 新卡开户：new_card.html
 
 ---空中充值---
-话费慢充：tel_fast_charging.html
+话费快充：tel_fast_charging.html
 话费慢充：tel_slow_charging.html
 
 流量充值： flow_charging.html
