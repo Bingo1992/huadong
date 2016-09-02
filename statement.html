@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>往来对账单</title>
+    <link href="css/datouwang.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="m-top clearfix">
+        <div class="w-ban">
+            <div class="fl">
+                <span class="logo-img sprite"></span>
+                <span class="logo-text">一站式手机批发及通讯业务综合平台</span>
+            </div>
+            <div class="fr">
+                <div class="user-info">
+                    <p>张三</p>
+                    <div class="member">
+                        <span class="vip">VIP</span>
+                        <span>二级会员</span>
+                    </div>
+                    <div class="balance">
+                        余额：
+                        <span class="amount">￥<span>5000.00</span></span>
+                    </div>
+                </div>
+                <div class="user-nav">
+                    <a class="user" href="#">
+                        <i class="icon-my"></i>
+                    </a>
+                    <ul class="user-nav-list js-hover">
+                        <li>
+                            <a href="personnel.html">
+                                <i class="icon-my"></i> 个人中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="order_wholesale.html">
+                                <i class="icon-order"></i> 我的订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="statement.html">
+                                <i class="icon-statement"></i> 往来对账订单
+                            </a>
+                        </li>
+                        <li>
+                            <a href="my_data.html">
+                                <i class="icon-edit"></i> 我的资料
+                            </a>
+                        </li>
+                        <li>
+                            <a href="my_brokerage.html">
+                                <i class="icon-coin"></i> 我的佣金
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 购物车 -->
+                <div class="cart-container" href="cart.html">
+                    <a class="btn-cart" href="cart.html">
+                        <i class="icon-shopping"></i>
+                        <span>我的购物车</span>
+                        <i class="icon-right"></i>
+                        <span class="cart-num sprite">51</span>
+                    </a>
+                    <div class="cart-box js-hover">
+                        <div class="cart-title">
+                            <h5>购物车商品</h5>
+                        </div>
+                        <!-- 购物车列表 -->
+                        <ul class="cart-box-list">
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>5</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                                <div class="t-clear">
+                                    <p class="label-sale"><span>满减</span>新上线活动，手机订货满10000立减少800</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>5</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>5</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl">
+                                    <a class="mobile-info" href="#">
+                                        <img src="images/mobile.jpg" />
+                                        <span class="nowrap-3">乐视（Le）乐2(X620)32GB银色 移动联通电信4G手机 双卡双待</span>
+                                    </a>
+                                </div>
+                                <div class="fr cart-detail">
+                                    <p class="label-wrong">￥<span>1900.00</span></p>
+                                    <p>数量: <span>155</span></p>
+                                    <a class="delete" href="#">删除</a>
+                                </div>
+                                <div class="t-clear">
+                                    <p class="label-sale"><span>满减</span>新上线活动，手机订货满10000立减少800</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- 购物车空时显示 -->
+                        <p class="empty-cart hide">
+                            购物车空空如也~~~
+                        </p>
+                        <!-- 购物车底部总计 -->
+                        <div class="bottom-calculate">
+                            <div class="fl">
+                                <p class="pro-num">共<span class="label-wrong">20</span>件商品</p>
+                                <p class="pro-cost">共计<span class="label-wrong">￥<span>500000.00</span></span>
+                                </p>
+                            </div>
+                            <div class="fr">
+                                <a class="btn">立即下订</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 购物车  结束 -->
+                <a class="btn-balance btn" href="">余额充值</a>
+            </div>
+        </div>
+    </div>
+    <!-- 头部 结束 -->
+    <!-- 导航栏 -->
+    <div class="top-nav">
+        <ul class="w-ban">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="wholesale.html">手机批发</a></li>
+            <li class="mobile-charge">
+                <a href="#">空中充值</a>
+                <ul class="mobile-charge-list air-charge">
+                    <li><a href="tel_fast_charging.html">话费充值</a></li>
+                    <li><a href="flow_charging.html">流量充值</a></li>
+                </ul>
+            </li>
+            <li class="mobile-charge">
+                <a href="#">移动业务</a>
+                <ul class="mobile-charge-list">
+                    <li><a href="change_sim.html">补换SIM卡</a></li>
+                    <li><a href="combo_manage.html">套餐办理</a></li>
+                    <li><a href="realName_regist.html">实名登记</a></li>
+                    <li><a href="self_card.html">自带卡优惠</a></li>
+                    <li><a href="broadband_pack.html">宽带报装</a></li>
+                </ul>
+            </li>
+            <li><a href="appreciation.html">增值服务</a></li>
+        </ul>
+    </div>
+    <!-- 导航栏 结束 -->
+
+    <div class="w-ban clearfix">
+        <!-- 左侧导航 -->
+        <ul class="left-nav">
+            <li>
+                <a href="personnel.html">
+                    <i class="icon-my"></i> 个人中心
+                </a>
+            </li>
+            <li>
+                <a href="order_wholesale.html">
+                    <i class="icon-order"></i> 我的订单
+                </a>
+            </li>
+            <li class="active">
+                <a href="statement.html">
+                    <i class="icon-statement"></i> 往来对账订单
+                </a>
+            </li>
+            <li>
+                <a href="my_data.html">
+                    <i class="icon-edit"></i> 我的资料
+                </a>
+            </li>
+            <li>
+                <a href="my_brokerage.html">
+                    <i class="icon-coin"></i> 我的佣金
+                </a>
+            </li>
+        </ul>
+        <!-- 左侧导航结束 -->
+
+        <!-- 右侧订单 -->
+        <div class="order">
+           
+            <div class="calendar clearfix">
+                <div class="fl">
+                   <!-- 日期 -->
+                    <div class="startTime">
+                        <input  class="inline laydate-icon" id="start" placeholder="选择开始时间" readonly />
+                    </div>
+                    <span>至</span>
+                    <div class="endTime">
+                        <input type="text"  class="inline laydate-icon" id="end"  placeholder="选择结束时间" readonly/>
+                    </div>
+                    <div class="btn-info btn">查询</div>
+                </div>
+               
+            </div>
+            <table class="table">
+        
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>单据号/状态</th>
+                        <th>类型</th>
+                        <th>金额变动（元）</th>
+                        <th>当前金额（元）</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2016.08.04 12:11:05</td>
+                        <td>201604030040022</td>
+                        <td>信用卡推广</td>
+                        <td><span class="label-warning">+ <span>2000.00</span></span></td>
+                        <td>5000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2016.08.04 12:11:05</td>
+                        <td>201604030040022</td>
+                        <td>信用卡推广</td>
+                        <td><span class="label-warning">+ <span>2000.00</span></span></td>
+                        <td>5000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2016.08.04 12:11:05</td>
+                        <td>201604030040022</td>
+                        <td>信用卡推广</td>
+                        <td><span class="label-success">- <span>2000.00</span></span></td>
+                        <td>5000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2016.08.04 12:11:05</td>
+                        <td>201604030040022</td>
+                        <td>信用卡推广</td>
+                        <td><span class="label-warning">+ <span>2000.00</span></span></td>
+                        <td>5000.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 右侧订单 结束 -->
+    </div>
+
+    <!-- 分页 -->
+    <div class="page-conteiner">
+        <div class="tcdPageCode"></div>
+        <p class="totalPage">共<span></span>页</p>
+    </div>
+        
+    <!-- 分页结束 -->
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="w-ban">
+            <div class="tel-phone fl">
+                <div class="fl">
+                    <i class="icon-phone"></i>
+                </div>
+                <div class="fl">
+                    <h5>400-6888-888</h5>
+                    <p>在线时间：工作日：9:00-12:00</p>
+                </div>
+            </div>
+            <div class="fl">
+                <ul class="bot-nav clearfix">
+                    <li>
+                        <a href="#">关于华动</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助说明</a>
+                    </li>
+                    <li>
+                        <a href="#">商务合作</a>
+                    </li>
+                    <li>
+                        <a href="#">人才招聘</a>
+                    </li>
+                    <li>
+                        <a href="#">法律申明</a>
+                    </li>
+                    <li>
+                        <a href="#">隐私保护</a>
+                    </li>
+                </ul>
+                <ul class="friend-link clearfix">
+                    <li>友情链接：</li>
+                    <li><a href="#">腾讯网</a></li>
+                    <li><a href="#">淘宝网</a></li>
+                    <li><a href="#">天猫网</a></li>
+                    <li><a href="#">中国移动</a></li>
+                    <li><a href="#">中国联通</a></li>
+                    <li><a href="#">中域通讯</a></li>
+                    <li><a href="#">幻想曲手机</a></li>
+                    <li><a href="#">京东手机</a></li>
+                </ul>
+                <div class="bottom-info">
+                    <p>增值电信业务经营许可证：浙B2-20110446 网络文化经营许可证：浙网文[2015]0295-065号</p>
+                    <p>© 2003-2016 WWW.HUADONG.COM 版权所有</p>
+                </div>
+            </div>
+            <div class="fr">
+                <img src="images/code.jpg">
+            </div>
+        </div>
+    </div>
+    <!-- 底部 结束 -->
+
+    <!-- 有问题点我 -->
+     <!-- 有问题点我 -->
+    <div class="customer-service">
+        <div class="ask-girl">
+            <span class="sprite-cancel sprite"></span>
+            <img src="images/girl.png"/>
+            <p>有问题点我</p>
+        </div>
+        <div class="share-container">
+            <div class="share">
+                <i class="icon-share"></i>
+                <p>分享到</p>
+            </div>
+            <div class="share-type">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon-qq"></i>
+                            <p>QQ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-weixin"></i>
+                            <p>微信</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-weibo"></i>
+                            <p>微博</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="right-triangle sprite"></div>
+            </div> 
+        </div>
+        <a class="slideUp" onclick="javascript:scrollTo(0,0)"><i class="icon-up"></i></a>
+    </div>   
+    
+    <!-- 有问题点我 结束 -->
+
+    <!-- 信息弹窗 -->
+    <div class="ui-dialog">
+        <div class="dialog-container">
+            <h5>
+                <span>订单明细</span>
+                <span class="icon-error"></span>
+            </h5>
+            <div class="dialog-content">
+                <ul class="order-info">
+                    <li class="fl" style="padding-right:200px;">
+                        <label>收货人姓名</label>
+                        <span>张一凡</span>
+                    </li>
+                    <li>
+                        <label>联系电话</label>
+                        <span>13800138000</span>
+                    </li>
+                    <li>
+                        <label>收货地址</label>
+                        <span>广东省广州市天河区天府路307号3-4楼</span>
+                    </li>
+                    <li>
+                        <label>订单总计(元)</label>
+                        <span>45000.00</span>
+                    </li>
+                    <li>
+                        <label>物流信息</label>
+                        <span>顺丰 049230942342</span>
+                    </li>
+                    <li>
+                        <label>订单日期</label>
+                        <span>2016.08.10 12:40:03</span>
+                    </li>
+                    <li>
+                        <label>订单状态</label>
+                        <span class="label-wrong">待付款</span>
+                    </li>
+                </ul>
+
+                <div class="product-detail">
+                    <div class="pro-title">
+                        <p>商品明细</p>
+                    </div>
+                    <table class="pro-table">
+                        <thead>
+                            <tr>
+                                <th>商品信息</th>
+                                <th>商品单价（元）</th>
+                                <th>订货数量</th>
+                                <th>订货金额（元）</th>
+                                <th>确认数量</th>
+                                <th>确认金额（元）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                <td class="nowrap-3">荣耀7 (PLK-CL00)3GB+16GB内存版 电信4G双卡双待双通 <span class="label-warning">典雅灰</span> 荣耀7 (PLK-CL00) 3GB</td>
+                                <td class="label-wrong">1499.00</td>
+                                <td>10</td>
+                                <td class="label-wrong">14990.00</td>
+                                <td>10</td>
+                                <td class="label-wrong">14990.00</td>
+                            </tr>
+                            <tr>
+                                <td class="nowrap-3">荣耀7 (PLK-CL00)3GB+16GB内存版 电信4G双卡双待双通 <span class="label-warning">典雅灰</span> 荣耀7 (PLK-CL00) 3GB+16GB内存版+16GB内存版</td>
+                                <td class="label-wrong">1499.00</td>
+                                <td>10</td>
+                                <td class="label-wrong">14990.00</td>
+                                <td>10</td>
+                                <td class="label-wrong">14990.00</td>
+                            </tr>
+                            <tr>
+                                <td class="nowrap-3">荣耀7 (PLK-CL00)3GB+16GB内存版 电信4G双卡双待双通 <span class="label-warning">典雅灰</span> 荣耀7 (PLK-CL00) 3GB</td>
+                                <td class="label-wrong">1499.00</td>
+                                <td>10</td>
+                                <td class="label-wrong">14990.00</td>
+                                <td>10</td>
+                                <td class="label-wrong">14990.00</td>
+                            </tr>
+                        </tbody>   
+                            
+                    </table>
+                </div>
+            </div> 
+        </div> 
+    </div>  
+    <!-- 信息弹窗结束  -->
+
+    <!-- 是否取消订单弹窗 -->
+    <div class="confirm-dialog">
+        <div class="confirm-container">
+            <p>确定取消订单吗？</p>
+            <div class="two-btn">
+                <p class="confirm btn">确定</p>
+                <p class="cancel btn">取消</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/laydate.js"></script>
+    <script type="text/javascript" src="js/jquery.page.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript">
+
+     var page = 20;//页数
+    $(".tcdPageCode").createPage({
+        pageCount: page,
+        current:1
+        // backFn:function(p){
+        //    $('.totalPage span').html(page);
+
+        // }
+    });
+     $('.totalPage span').html(page);
+
+    </script>
+</body>
+
+</html>
