@@ -180,7 +180,7 @@
                     <li><a href="broadband_pack.html">宽带报装</a></li>
                 </ul>
             </li>
-            <li><a href="appreciation.html">增值服务</a></li>
+            <li><a href="popularize_center.html">增值服务</a></li>
         </ul>
     </div>
     <!-- 导航栏 结束 -->
@@ -564,20 +564,7 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript">
 
-    // 取消订单
-    $('.btn-cancel').click(function(){
-        var $parent = $(this).parents('tr');
-        $('.confirm-dialog').addClass('show');
-        $('.confirm-dialog .cancel').click(function(){
-            $('.confirm-dialog').removeClass('show');
-        });
-        $('.confirm-dialog .confirm').click(function(){
-            $('.confirm-dialog').removeClass('show');
-            $parent.remove();
-        });
-    });
-
-     var page = 20;//页数
+    var page = 20;//页数
     $(".tcdPageCode").createPage({
         pageCount: page,
         current:1

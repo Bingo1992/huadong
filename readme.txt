@@ -22,10 +22,15 @@
 宽带报装：broadband_pack.html
 新卡开户：new_card.html
 
----空中充值---
+---空中充值---balance_recharge.html
 话费快充：tel_fast_charging.html
 话费慢充：tel_slow_charging.html
 话费批量慢充：batch_slow_charging.html
+话费批量快充：batch_fast_charging.html
 
 流量充值： flow_charging.html
 流量批量充值：batch_flow_charging.html
+
+-----余额充值---
+支付宝：Alipay.html
+网银转账：E_bank.html

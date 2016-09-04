@@ -288,7 +288,7 @@ h6{font-size: 14px;}
 	margin-right: 10px;
 }
 .bot-nav li {
-	float: left;
+	display: inline-block;
 }
 .bot-nav a{
 	display: block;
@@ -304,6 +304,7 @@ h6{font-size: 14px;}
 	padding:20px 10px;
 	font-size: 12px;
 }
+
 .bottom-info {
 	border-top: 1px solid #a0b9db;
 	line-height: 24px;
@@ -426,7 +427,7 @@ h6{font-size: 14px;}
 	font-size: 12px;
 }
 .balance {color: #999;margin-right: 10px;}
-.amount {color: #eb5345;}
+.amount {color: #eb5345;display: inline-block;}
 
 /*右上角购物车*/
 .cart-container {
@@ -621,8 +622,7 @@ h6{font-size: 14px;}
 .sort-btn {display: inline-block;}
 .sort-btn li {
 	float: left;
-	margin-top: 14px;
-	margin-left: 4px;
+	margin: 14px 4px;
 }
 .sort-btn li.active a{
 	background-color: #159df3;
@@ -700,10 +700,11 @@ h6{font-size: 14px;}
 	border-radius: 2px;
 	cursor: pointer;
 }
-.table .btn-cancel{
+.btn-cancel{
 	color: #ccc;
 	cursor: pointer;
-	padding-top: 2px;
+	line-height: 30px;
+	font-size: 12px;
 }
 .table .btn {font-size: 14px;}
 
@@ -925,6 +926,7 @@ h6{font-size: 14px;}
 	border-radius: 2px;
 	box-sizing:border-box;
 	cursor: pointer;
+	padding: 0 10px;
 }
 .btn-gray i {
 	color: #d5dadd;
@@ -933,7 +935,6 @@ h6{font-size: 14px;}
 .p-top-info .btn-gray {
 	margin-top: 20px;
 	margin-left: 8px;
-	padding: 0 10px;
 }
 .p-bottom-info {
 	height: 100px;
@@ -1030,6 +1031,7 @@ h6{font-size: 14px;}
     margin-top: 30px;
     float: right;
 }
+
 .title-green {background-color: #6ec884;}
 .title-orange{background-color: #fc8158;}
 .title-orange a{
@@ -1216,6 +1218,7 @@ input.text2 {
 }
 .b-top {
 	margin: -20px 0 20px 176px;
+	display: block;
 }
 /*----------我的佣金----------------*/
 .my-brokerage {
@@ -1369,7 +1372,35 @@ input.text2 {
 	display: inline-block;
 	margin-right: 20px;
 }
-
+/*--------------批量慢充--------------*/
+.batch-mobile {
+	display: inline-block;
+}
+.batch-mobile li {
+	margin-bottom: 30px;
+}
+.add-mobile {
+	width: 400px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px dashed #96bfee;
+    text-align: center;
+    color: #96bfee;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+i.delete-mobile {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background-color: #eb5345;
+	margin-left: 40px;
+	cursor: pointer;
+	font-size: 14px;
+}
 /*-------------推广中心--------------*/
 .popularize-list{
 	margin-top: 30px;
@@ -1536,20 +1567,20 @@ li.o-box-1 {width: 420px !important;}
 .step-3 {background-position: -167px -49px;}
 .step-logo {
 	float: left;
-    width: 200px;
+    width: 240px;
     text-align: center;
     position: relative;
-    margin-left: 100px;
+    margin-left: 70px;
     line-height: 50px;
     color: #999;
 }
-.line {
+.step-line {
 	position: absolute;
-    width: 250px;
+    width: 260px;
     height: 4px;
     overflow: hidden;
     background-color: #e9ebee;
-    margin-left: 120px;
+    margin-left: 140px;
     top: 18px;
     left: 5px;
 }
@@ -1569,7 +1600,7 @@ li.o-box-1 {width: 420px !important;}
 }
 
 /*------------------购物车----------------*/
-.cart-list {
+.cart-list,.recharge-container {
 	width: 1200px;
 	margin: 30px auto;
 }
@@ -1584,22 +1615,20 @@ li.o-box-1 {width: 420px !important;}
 	background-color: #f1f2f4;
 	padding: 0 20px;
 	text-align: left;
-	border-bottom: 1px solid #e0e3e6;
 }
-.cart-table tr{border-bottom: 1px solid #e0e3e6;}
+.cart-table tr{border-top: 1px solid #e0e3e6;}
 .cart-table tr.checked {background-color: #def1fc;}
-.cart-table tr:last-child,
 .cart-list .data-title {border-bottom: none;}
 table .center {text-align: center;}
-.cart-table .checkbox {vertical-align: middle;}
+.cart-table .checkbox {vertical-align: middle;margin-right: 10px;}
 .cart-table td {padding: 20px;}
+.cart-table td:nth-child(2) {padding-left: 0;}
 .gray-font {
 	color: #999;
 	font-size: 12px;
 	line-height: 24px;
 }
 .cart-img {
-	margin-left: 10px;
 	vertical-align: middle;
 	width: 88px;
 	height: 88px;
@@ -1610,7 +1639,7 @@ table .center {text-align: center;}
 .minus, .plus {
   height: 30px;
   line-height: 30px;
-  border-radius: 6px;
+  border-radius: 3px;
   text-align: center;
   background-color: #e9ebee;
   border: 1px solid #e0e3e6;
@@ -1626,9 +1655,9 @@ table .center {text-align: center;}
 .count {
   height: 30px;
   line-height: 30px;
-  border-radius: 6px;
+  border-radius: 3px;
   text-align: center;
-  width: 40px;
+  width: 50px;
   border: 1px solid #e0e3e6;
   display: inline-block;
 }
@@ -1648,7 +1677,295 @@ table .center {text-align: center;}
 
 .btn-calculate {
 	width: 100px;
-	margin-top: 14px;
+	margin-top: 14px
+}
+
+
+/*------------------手机批发-----------------*/
+.mobile-wholesale  {
+	margin: 30px 20px 0 0;
+	width: 900px;
+	box-sizing: border-box;
+	float: left;
+}
+.search-form{
+	height: 36px;
+	line-height: 36px;
+	border-radius: 2px;
+	border: 2px solid #159df3;
+	background-color: #fff;
+	width: 500px;
+}
+.select-goods {
+	float: left;
+	width: 80px;
+	text-align: center;
+	border-right: 1px solid #159df3;
+	position: relative;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.sort-container {
+	margin: 20px 0;
+    background-color: #fff;
+}
+.sort-title{
+	height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    background-color: #a0cdeb;
+}
+.sort-title a {
+	display: inline-block;
+	line-height: 40px;
+	width: 140px;
+	text-align: center;
+	background: #fff;
+	margin-right: 6px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.sort-title .fl a.active {
+	background-color: #159dfe;
+	color: #fff;
+}
+.shrink{
+	background-color: #f1f2f4;
+	line-height: 40px;
+	width: 100px;
+	text-align: center;
+	color: #999;
+	display: inline-block;
+	margin: 10px 0;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.sort-cotainer-list{
+	padding-bottom: 10px;
+}
+.sort-cotainer-list li {
+	line-height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #e0e3e6;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
+.sc-title {
+	display: block;
+    float: left;
+    width: 80px;
+    color: #666;
+    margin-right: 10px;
+}
+.sc-list {
+	width: 700px;
+    float: left;
+}
+.sc-list a {margin-right: 10px;}
+.sc-list a:hover {color: #159dfe;}
+.sc-list-1 .sc-list{line-height: 20px;padding-top: 10px;}
+.btn-more{
+	display: block;
+    float: right;
+    color: #159dfe;
+    border: 1px solid #159dfe;
+    padding: 0 10px;
+    line-height: 22px;
+    margin-top: 18px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.has-select-sort {
+	margin: 10px 10px 0 10px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #f1f2f4;
+	padding: 0 10px;
+}
+.has-select-sort ul{display: inline-block;}
+.has-select-sort span {float: left;font-size: 12px;}
+.has-select-sort li {
+	display: block;
+    background-color: #159dfe;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 2px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    width: auto;
+    border-bottom: none;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.has-select-sort li span {margin-right: 6px;}
+.goods-list {
+    position: absolute;
+    width: 80px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e0e3e6;
+    line-height: 30px;
+    padding: 6px 10px;
+    display: none;
+    z-index: 10;
+}
+.goods-list a:hover,.price-list a:hover {
+	color: #159df3;
+	cursor: pointer;
+}
+.select-goods i{
+	vertical-align: middle;
+	color: #a0cdeb;
+}
+.search-form input {
+	width: 300px;
+	height: 36px;
+	line-height: 36px;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+.btn-search {
+	float: right;
+	color: #fff;
+	background-color: #159df3;
+	width: 120px;
+	text-align: center;
+}
+.btn-price{position: relative;}
+.price-list {
+	position: absolute;
+	width: 120px;
+	border: 1px solid #e0e3e6;
+	box-sizing: border-box;
+	line-height: 30px;
+	padding: 6px 10px;
+	background-color: #fff;
+	display: none;
+}
+.btn-add-cart{
+	width: 160px;
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+.btn-add-cart:hover{
+	background-color: #da3c2d;
+}
+.cart-cal-now {
+	position: relative;
+	background-color: #fcfcfd;
+	border: 1px solid #e0e3e6;
+	text-align: center;
+	width: 88px;
+	height: 88px;
+	border-radius: 2px;
+	box-sizing: border-box;
+	right: -910px;
+    top: -110px;
+	display: none;
+}
+.cart-cal-now i{
+	color: #fc8158;
+	font-size: 36px;
+	padding-top: 10px;
+}
+/*--------------余额充值-----------*/
+.js-pay-type li{
+	width: 180px;
+	height: 48px;
+	line-height: 48px;
+}
+.js-pay-type a{display: block;}
+.Alipay,.E_bank {
+	width: 124px;
+    height: 32px;
+	background-position: -209px -49px;
+	vertical-align: middle;
+	margin-top: 6px;
+}
+.E_bank {
+	background-position: -209px -83px;
+}
+
+.payType-list li {display: none;}
+.payType-list li.show {display: block;}
+.payType-list .step {
+	margin-left: -50px;
+}
+
+
+/*---------------注册页面-------------*/
+.border-bottom{border-bottom: 1px solid #e0e3e6;}
+.register-form {
+	width: 700px;
+    margin: 40px auto;
+}
+.consent {margin: 10px 0 20px 80px;}
+.consent a{color: #159dfe;}
+.footer-2{
+	text-align: center;
+    color: #999;
+    line-height: 24px;
+    padding: 80px 0 40px 0;
+}
+.footer-2 a{color: #999;}
+.bot-nav-2 {font-size: 12px;}
+
+/*--------------登录页面------------*/
+.login-banner {
+	width: 100%;
+    background: url(../images/loginBg.jpg) center no-repeat;
+}
+.public-tip{
+	background-color: #fff7d2;
+	width: 300px;
+	box-sizing: border-box;
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid #f4bd6c;
+	color: #f4bd6c;
+	margin: 20px 0;
+}
+.login {
+    float: right;
+    width: 340px;
+    height: 360px;
+    box-sizing:border-box;
+    border-radius: 4px;
+    padding: 16px 20px;
+    background-color: #fff;
+    margin: 80px 0;
+}
+.login .input-form {padding: 0;}
+.login .input-line {margin-bottom: 20px;}
+.login h4 {
+    float: left;
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+.regist-link {
+	float: right;
+	color: #eb5345;
+	font-size: 16px;
+	padding-bottom: 16px;
+}
+input.text3{width: 300px;}
+input.text4{width: 180px;}
+.verify-img {
+	display: inline-block;
+	float: right;
+	width: 90px;
+}
+.btn-login {padding: 20px 0;}
+.btn-login .btn {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
 }
 /*-----最后-----*/
 .show {display: block;}

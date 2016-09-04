@@ -1,22 +1,22 @@
 window.onload = function() {
-    // ----------判断页面是否出现滚动条来控制页脚位置-------------
-    if (document.documentElement.clientHeight > document.documentElement.offsetHeight) {
-        $('.footer').addClass('fixed');
-    } else {
-        $('.footer').removeClass('fixed');
+        // ----------判断页面是否出现滚动条来控制页脚位置-------------
+        if (document.documentElement.clientHeight > document.documentElement.offsetHeight) {
+            $('.footer').addClass('fixed');
+        } else {
+            $('.footer').removeClass('fixed');
+        }
+
+        // ------------左右高度一致---------
+        var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
+        var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
+        var mh = Math.max(hl, hr); //比较hl与hr的高度，并将最大值赋给变量mh
+        $(".left-nav-2").height(mh); //将left层高度设为最大高度mh  
+        $(".charge-container").height(mh); //将right层高度设为最大高度
     }
-   
-    // ------------左右高度一致---------
-    var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
-    var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
-    var mh = Math.max(hl, hr); //比较hl与hr的高度，并将最大值赋给变量mh
-    $(".left-nav-2").height(mh); //将left层高度设为最大高度mh  
-    $(".charge-container").height(mh); //将right层高度设为最大高度
-}
-// ----------------------首页---------------
+    // ----------------------首页---------------
 $(function() {
-    // 头部个人中心,购物车
-    $('.user-nav').add('.cart-container').hover(function() {
+    // 头部个人中心,购物车,手机批发页面价格高低 hover
+    $('.user-nav').add('.cart-container').add('.btn-price').hover(function() {
         $(this).find('.js-hover').show();
     }, function() {
         $('.js-hover').hide();
@@ -86,25 +86,38 @@ $(function() {
     });
 
 
+    //我的订单页面取消订单，购物车页面取消购物车
+    $('.btn-cancel').click(function(){
+        var $parent = $(this).parents('tr');
+        $('.confirm-dialog').addClass('show');
+        $('.confirm-dialog .cancel').click(function(){
+            $('.confirm-dialog').removeClass('show');
+        });
+        $('.confirm-dialog .confirm').click(function(){
+            $('.confirm-dialog').removeClass('show');
+            $parent.remove();
+        });
+    });
+
     // ---------------------------购物车页面-----------------------
     minus_plus();
     allCheck();
 
-     //购物车数量加减
-    function minus_plus(){
+    //购物车数量加减
+    function minus_plus() {
         var count = 1;
-        $('.minus').on('click',function(){
+        $('.minus').on('click', function() {
             var $parent = $(this).parent('.amount');
             var $count = $parent.find('.count');
             count = $count.val(); //每次点击前先获取input的值
-            if(count<=1){
+            if (count <= 1) {
                 $(this).addClass('disable');
                 return;
             }
             $count.val(--count);
         });
 
-        $('.plus').on('click',function(){  
+        $('.plus').on('click', function() {
             var $parent = $(this).parent('.amount');
             var $count = $parent.find('.count');
             count = $count.val(); //每次点击前先获取input的值
@@ -112,57 +125,135 @@ $(function() {
             $('.minus').removeClass('disable');
         });
 
-        $('.count').change(function (){
-            if($(this).val()==0){
+        $('.count').change(function() {
+            if ($(this).val() == 0) {
                 alert('数量不能为0');
                 $(this).siblings('.minus').addClass('disable');
                 $(this).val(1);
             }
         });
     }
-    
-    function allCheck(){
+
+    function allCheck() {
         //全选
-        $('.all-check').add('.select-all').click(function(){ 
+        $('.all-check').add('.select-all').click(function() {
             var check = $(this).find(":checkbox").prop("checked");
-            if(check == false){
-                $(".check-list :checkbox").prop("checked", false); 
+            if (check == false) {
+                $(".check-list :checkbox").prop("checked", false);
                 $(".all-check :checkbox").prop("checked", false);
-                $(".select-all :checkbox").prop("checked", false);  
-            }else{
-                $(".check-list :checkbox").prop("checked", true); 
-                $(".all-check :checkbox").prop("checked", true); 
-                $(".select-all :checkbox").prop("checked", true); 
-            }            
+                $(".select-all :checkbox").prop("checked", false);
+            } else {
+                $(".check-list :checkbox").prop("checked", true);
+                $(".all-check :checkbox").prop("checked", true);
+                $(".select-all :checkbox").prop("checked", true);
+            }
         });
 
         //单选某个商品时，若列表中有未勾选的商品，则取消全选按钮的选中状态
-        $(".check-list :checkbox").click(function(){
+        $(".check-list :checkbox").click(function() {
             var flag = 0;
             //遍历每个商品
-            $(".check-list :checkbox").each(function(i){
+            $(".check-list :checkbox").each(function(i) {
                 var check = $(".check-list :checkbox").eq(i).prop("checked");
-                if(check == false){
+                if (check == false) {
                     flag++;
                     $(this).parents('tr').removeClass('checked');
-                }else {
+                } else {
                     $(this).parents('tr').addClass('checked');
                 }
             });
 
-            if(flag>=1){
+            if (flag >= 1) {
                 $(".all-check :checkbox").prop("checked", false);
-                $(".select-all :checkbox").prop("checked", false); 
-            }else {     
-                $(".all-check :checkbox").prop("checked", true); 
-                $(".select-all :checkbox").prop("checked", true); 
+                $(".select-all :checkbox").prop("checked", false);
+            } else {
+                $(".all-check :checkbox").prop("checked", true);
+                $(".select-all :checkbox").prop("checked", true);
             }
         });
     }
     // ---------------------------购物车页面--结束---------------------
 
+    // ----------手机批发页面------------、
+    // 搜索框选择
+    $('.select-goods').hover(function() {
+        $(this).find('.goods-list').show();
+    }, function() {
+        $(this).find('.goods-list').hide();
+    });
 
-})
+    // 收起筛选
+    $('.shrink').toggle(function(){
+        $('.sort-cotainer-list').hide()
+        $(this).find('i').attr('class','icon-down');
+    },function(){
+        $('.sort-cotainer-list').show();
+        $(this).find('i').attr('class','icon-up');
+    });
+
+    //筛选
+    $('.sc-list').find('a').live('click',function(){
+        var value = $(this).html();
+        var $parent = $(this).parents('li');
+        var dataId = $parent.attr('class');
+        $parent.hide();
+        createLi(value,dataId);
+       
+    });
+    //创建一个li元素
+    function createLi(value,dataId){
+        var html = '<li data-id='+dataId+'>\
+                    <span>'+value+'</span>\
+                    <i>X</i>\
+                </li>';
+        $('.has-select-sort ul').append(html);
+    }
+
+    //删除li元素
+    $('.has-select-sort').find('li').live('click',function(){
+        var dataId = $(this).attr('data-id');
+        $('.sortList').find('li.'+dataId).show();
+        $(this).remove();
+    });
+
+// --------------批量充值----------------------
+   //添加号码
+    $('.add-mobile').live('click',function(){
+        var len = $('.batch-mobile li').length;
+        var value = 0;
+        if(len<11){//最后一个li为添加号码
+            createMobile();
+            value = parseInt($('.mobile-num').html());
+            $('.mobile-num').html(++value);
+        }else {
+            alert('最多只可添加10个号码');
+        }
+    })
+    //删减号码
+    $('.delete-mobile').live('click',function(){
+        var $li = $(this).parent('li');
+        value = parseInt($('.mobile-num').html());
+        $('.mobile-num').html(--value);
+        $li.remove();
+    })
+    // 添加号码函数
+    function createMobile(){
+        var html = '<li>\
+            <div class="input-text">\
+                <input class="mobile text2" type="text" placeholder="请输入手机号">\
+            </div>\
+            <select>\
+                <option>面值100元</option>\
+                <option>面值200元</option>\
+            </select>\
+            价格：<span class="label-wrong">- -</span>\
+            <i class="delete-mobile icon-error"></i>\
+        </li>';
+        $('.mobile-last-li').before(html);
+    }
+})  
+    
+
 
 // -----------------返回顶部-----------------
 //获取滚动条当前的位置 
@@ -181,14 +272,12 @@ window.onscroll = function() {
         $('.slideUp').show();
         $('.share').show();
         $('.customer-service').show();
-       
+
     } else {
         $('.slideUp').hide();
         $('.share').hide();
 
     }
-
-     
 }
 
 // ------------------返回顶部结束---------------
@@ -196,32 +285,30 @@ window.onscroll = function() {
 
 
 //----------日期范围限制-------------------
-    var start = {
-        elem: '#start',
-        format: 'YYYY-MM-DD hh:mm:ss',
-        min: '2009-01-01', //设定最小日期为当前日期
-        max: '2099-06-16', //最大日期
-        istime: true,
-        istoday: false,
-        choose: function(datas){
-             end.min = datas; //开始日选好后，重置结束日的最小日期
-             end.start = datas //将结束日的初始值设定为开始日
-        }
-    };
+var start = {
+    elem: '#start',
+    format: 'YYYY-MM-DD hh:mm:ss',
+    min: '2009-01-01', //设定最小日期为当前日期
+    max: '2099-06-16', //最大日期
+    istime: true,
+    istoday: false,
+    choose: function(datas) {
+        end.min = datas; //开始日选好后，重置结束日的最小日期
+        end.start = datas //将结束日的初始值设定为开始日
+    }
+};
 
-    var end = {
-        elem: '#end',
-        format: 'YYYY-MM-DD hh:mm:ss',
-        max: '2099-06-16',
-        istime: true,
-        istoday: false,
-        choose: function(datas){
-            start.max = datas; //结束日选好后，充值开始日的最大日期
-        }
-    };
-    laydate(start);
-    laydate(end);
+var end = {
+    elem: '#end',
+    format: 'YYYY-MM-DD hh:mm:ss',
+    max: '2099-06-16',
+    istime: true,
+    istoday: false,
+    choose: function(datas) {
+        start.max = datas; //结束日选好后，充值开始日的最大日期
+    }
+};
+laydate(start);
+laydate(end);
 
 // --------日期插件结束------------
-
-
