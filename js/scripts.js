@@ -49,8 +49,8 @@ $(function() {
         }
     });
 
-    //信息弹窗(添加收货地址，表单查看详情)
-    $('.add-addr-info').add('.detail-info').click(function() {
+    //信息弹窗(添加收货地址，编辑地址，表单查看详情)
+    $('.add-addr-info').add('.tab-edit').add('.detail-info').click(function() {
         $('.ui-dialog').addClass('show');
         $('.ui-dialog').find('.icon-error').click(function() {
             $('.ui-dialog').removeClass('show');
@@ -182,12 +182,20 @@ $(function() {
         $(this).find('.goods-list').hide();
     });
 
+    // 手机通讯，手机配件
+    $('.sort-title').find('a').click(function(){
+        $(this).addClass('active').siblings('a').removeClass('active');
+        var index = $('.sort-title a').index($(this));
+        $('.sort-cotainer-list').eq(index).addClass('show')
+        .siblings('.sort-cotainer-list').removeClass('show');
+    })
+
     // 收起筛选
     $('.shrink').toggle(function(){
-        $('.sort-cotainer-list').hide()
+        $('.sc-container').hide()
         $(this).find('i').attr('class','icon-down');
     },function(){
-        $('.sort-cotainer-list').show();
+        $('.sc-container').show();
         $(this).find('i').attr('class','icon-up');
     });
 
@@ -196,17 +204,18 @@ $(function() {
         var value = $(this).html();
         var $parent = $(this).parents('li');
         var dataId = $parent.attr('class');
+        var $ul = $(this).parents('.sortList').siblings('.has-select-sort');
         $parent.hide();
-        createLi(value,dataId);
+        createLi($ul,value,dataId);
        
     });
     //创建一个li元素
-    function createLi(value,dataId){
+    function createLi(ul,value,dataId){
         var html = '<li data-id='+dataId+'>\
                     <span>'+value+'</span>\
                     <i>X</i>\
                 </li>';
-        $('.has-select-sort ul').append(html);
+        ul.append(html);
     }
 
     //删除li元素
@@ -251,6 +260,59 @@ $(function() {
         </li>';
         $('.mobile-last-li').before(html);
     }
+
+
+
+// -------------------物流信息-----------------
+    $('.address-info').find('li').hover(function(){
+        $(this).find('.edit-tab').show();
+    },function(){
+        $(this).find('.edit-tab').hide();
+    });
+
+    //删除地址
+    $('.tab-delete').click(function(){
+        if(confirm("确定删除此地址吗？")){
+            $(this).parents('li').remove();
+        } 
+    });
+    //添加新地址
+    $('.btn-add-address').click(function(){
+        addAddress();
+    });
+    //设为默认
+    $('.tab-default').click(function(){
+        $(this).parent('.edit-tab').siblings('.person-info').append('<p class="default-addr">默认地址</p>');
+        $(this).remove();
+
+
+    })
+  
+    //添加地址函数
+    function addAddress(){
+        var html = '<li><a>\
+                <label class="checkbox">\
+                    <input type="radio" name="address">\
+                    <i class="icon-hook_2"></i>\
+                </label>\
+                <div class="person-info">\
+                    <p>张一凡</p>\
+                    <p class="detail-addr">\
+                        <span>广东省</span>\
+                        <span>广州市</span>\
+                        <span>天河区</span>\
+                        <span>天府路307号</span>\
+                    </p>\
+                    <p>138001380000</p>\
+                </div>\
+                <div class="edit-tab">\
+                    <span class="tab-default">设为默认</span>\
+                    <span class="tab-edit">编辑</span>\
+                    <span class="tab-delete">删除</span>\
+                </div>\
+            </a></li>';
+        $('.address-info').append(html);
+    }
 })  
     
 
@@ -272,10 +334,12 @@ window.onscroll = function() {
         $('.slideUp').show();
         $('.share').show();
         $('.customer-service').show();
+        $('.cart-cal-now').addClass('show');
 
-    } else {
+    }else {
         $('.slideUp').hide();
         $('.share').hide();
+        $('.cart-cal-now').removeClass('show');
 
     }
 }

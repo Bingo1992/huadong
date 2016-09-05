@@ -31,6 +31,7 @@
 流量充值： flow_charging.html
 流量批量充值：batch_flow_charging.html
 
------余额充值---
-支付宝：Alipay.html
-网银转账：E_bank.html
+-----余额充值---balance_recharge.html
+
+
+物流：logistics.html

@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <!-- 购物车  结束 -->
-                <a class="btn-balance btn" href="">余额充值</a>
+                <a class="btn-balance btn" href="balance_recharge.html">余额充值</a>
             </div>
         </div>
     </div>
@@ -266,53 +266,75 @@
             <!-- 地址信息 -->
             <ul class="address-info">
                 <li>
-                    <label class="checkbox">
-                        <input type="radio" name="address" checked>
-                        <i class="icon-hook_2"></i>
-                    </label>
-                    <div class="person-info">
-                        <p>张一凡</p>
-                        <p class="detail-addr">
-                            <span>广东省</span>
-                            <span>广州市</span>
-                            <span>天河区</span>
-                            <span>天府路307号</span>
-                        </p>
-                        <p>138001380000</p>
-                        <p class="default-addr">默认地址</p>
-                    </div>
+                    <a>
+                        <label class="checkbox">
+                            <input type="radio" name="address" checked>
+                            <i class="icon-hook_2"></i>
+                        </label>
+                        <div class="person-info">
+                            <p>张一凡</p>
+                            <p class="detail-addr">
+                                <span>广东省</span>
+                                <span>广州市</span>
+                                <span>天河区</span>
+                                <span>天府路307号</span>
+                            </p>
+                            <p>138001380000</p>
+                            <p class="default-addr">默认地址</p>
+                        </div>
+                        <div class="edit-tab">
+                            <span class="tab-edit">编辑</span>
+                            <span class="tab-delete">删除</span>
+                        </div>
+                    </a>
+                        
                 </li>
                 <li>
-                    <label class="checkbox">
-                        <input type="radio" name="address">
-                        <i class="icon-hook_2"></i>
-                    </label>
-                    <div class="person-info">
-                        <p>张一凡</p>
-                        <p class="detail-addr">
-                            <span>广东省</span>
-                            <span>广州市</span>
-                            <span>天河区</span>
-                            <span>天府路307号</span>
-                        </p>
-                        <p>138001380000</p>
-                    </div>
+                    <a>
+                         <label class="checkbox">
+                            <input type="radio" name="address">
+                            <i class="icon-hook_2"></i>
+                        </label>
+                        <div class="person-info">
+                            <p>张一凡</p>
+                            <p class="detail-addr">
+                                <span>广东省</span>
+                                <span>广州市</span>
+                                <span>天河区</span>
+                                <span>天府路307号</span>
+                            </p>
+                            <p>138001380000</p>
+                        </div>
+                        <div class="edit-tab">
+                            <span class="tab-default">设为默认</span>
+                            <span class="tab-edit">编辑</span>
+                            <span class="tab-delete">删除</span>
+                        </div>
+                    </a>  
                 </li>
                 <li>
-                    <label class="checkbox">
-                        <input type="radio" name="address">
-                        <i class="icon-hook_2"></i>
-                    </label>
-                    <div class="person-info">
-                        <p>张一凡</p>
-                        <p class="detail-addr">
-                            <span>广东省</span>
-                            <span>广州市</span>
-                            <span>天河区</span>
-                            <span>天府路307号</span>
-                        </p>
-                        <p>138001380000</p>
-                    </div>
+                    <a>
+                         <label class="checkbox">
+                            <input type="radio" name="address">
+                            <i class="icon-hook_2"></i>
+                        </label>
+                        <div class="person-info">
+                            <p>张一凡</p>
+                            <p class="detail-addr">
+                                <span>广东省</span>
+                                <span>广州市</span>
+                                <span>天河区</span>
+                                <span>天府路307号</span>
+                            </p>
+                            <p>138001380000</p>
+                        </div>
+                        <div class="edit-tab">
+                            <span class="tab-default">设为默认</span>
+                            <span class="tab-edit">编辑</span>
+                            <span class="tab-delete">删除</span>
+                        </div>
+                    </a>
+                       
                 </li>
             </ul>
             <div class="btn-confirm">
@@ -430,6 +452,14 @@
                     </div>
                    <div class="input-line">
                         <label for="">所在地区</label>
+                            <select>
+                                <option>请输入省份</option>
+                                <option>广东省</option>
+                            </select>
+                            <select>
+                                <option>请输入城市</option>
+                                <option>广州市</option>
+                            </select>
                         <!-- <div class="select"> -->
                             <select>
                                 <option>请输入地区</option>
