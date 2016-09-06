@@ -49,8 +49,8 @@ $(function() {
         }
     });
 
-    //信息弹窗(添加收货地址，编辑地址，表单查看详情)
-    $('.add-addr-info').add('.tab-edit').add('.detail-info').click(function() {
+    //信息弹窗(添加收货地址，编辑地址，添加收货地址，表单查看详情)
+    $('.add-addr-info').add('.tab-edit').add('.btn-add-address').add('.detail-info').click(function() {
         $('.ui-dialog').addClass('show');
         $('.ui-dialog').find('.icon-error').click(function() {
             $('.ui-dialog').removeClass('show');
@@ -276,12 +276,15 @@ $(function() {
             $(this).parents('li').remove();
         } 
     });
-    //添加新地址
-    $('.btn-add-address').click(function(){
-        addAddress();
-    });
+
     //设为默认
-    $('.tab-default').click(function(){
+    $('.tab-default').live('click',function(){
+        $('.edit-tab').each(function(){
+            if(!($(this).find('span').hasClass('tab-default'))){
+                $(this).prepend('<span class="tab-default">设为默认</span>');//给li元素添加“设为默认”按钮
+            }
+        })
+        $('.address-info li').find('.default-addr').remove();//删除其他li元素的“默认地址”标签
         $(this).parent('.edit-tab').siblings('.person-info').append('<p class="default-addr">默认地址</p>');
         $(this).remove();
 
@@ -289,30 +292,30 @@ $(function() {
     })
   
     //添加地址函数
-    function addAddress(){
-        var html = '<li><a>\
-                <label class="checkbox">\
-                    <input type="radio" name="address">\
-                    <i class="icon-hook_2"></i>\
-                </label>\
-                <div class="person-info">\
-                    <p>张一凡</p>\
-                    <p class="detail-addr">\
-                        <span>广东省</span>\
-                        <span>广州市</span>\
-                        <span>天河区</span>\
-                        <span>天府路307号</span>\
-                    </p>\
-                    <p>138001380000</p>\
-                </div>\
-                <div class="edit-tab">\
-                    <span class="tab-default">设为默认</span>\
-                    <span class="tab-edit">编辑</span>\
-                    <span class="tab-delete">删除</span>\
-                </div>\
-            </a></li>';
-        $('.address-info').append(html);
-    }
+    // function addAddress(){
+    //     var html = '<li><a>\
+    //             <label class="checkbox">\
+    //                 <input type="radio" name="address">\
+    //                 <i class="icon-hook_2"></i>\
+    //             </label>\
+    //             <div class="person-info">\
+    //                 <p>张一凡</p>\
+    //                 <p class="detail-addr">\
+    //                     <span>广东省</span>\
+    //                     <span>广州市</span>\
+    //                     <span>天河区</span>\
+    //                     <span>天府路307号</span>\
+    //                 </p>\
+    //                 <p>138001380000</p>\
+    //             </div>\
+    //             <div class="edit-tab">\
+    //                 <span class="tab-default">设为默认</span>\
+    //                 <span class="tab-edit">编辑</span>\
+    //                 <span class="tab-delete">删除</span>\
+    //             </div>\
+    //         </a></li>';
+    //     $('.address-info').append(html);
+    // }
 })  
     
 
