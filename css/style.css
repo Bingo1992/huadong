@@ -113,9 +113,8 @@ overflow: hidden;
 	border-top-left-radius: 4px;
 }
 
-.user-nav:hover {
-	background-color: #83b1e8;	
-}
+.user-nav:hover {background-color: #83b1e8;	}
+.user-nav:hover .user-nav-list{display: block;}
 .user {
 	display: inline-block;
 	width: 32px;
@@ -181,6 +180,9 @@ overflow: hidden;
 
 .top-nav .w-ban>li>a:hover{
 	background-color: #0086eb;
+}
+.mobile-charge:hover ul {
+	display: block;
 }
 .mobile-charge-list {
 	position: absolute;
@@ -572,6 +574,9 @@ overflow: hidden;
 }
 .cart-container:hover {
 	background-color: #e0e1e4;
+}
+.cart-container:hover .cart-box {
+	display: block;
 }
 .btn-cart .icon-shopping {
 	color: #159df3 !important;
@@ -1287,6 +1292,7 @@ img.ad-img {width: 280px;}
 }
 input.text2 {width: 400px;}
 .address-info {line-height: 60px;}
+
 .address-info a {padding: 0 100px;display: block;}
 .address-info a:hover {background-color: #def1fc;}
 .edit-tab {
@@ -1917,6 +1923,7 @@ table .center {text-align: center;}
 	cursor: pointer;
 	box-sizing: border-box;
 }
+.select-goods:hover .goods-list {display: block;}
 .sort-container {
 	margin: 20px 0;
     background-color: #fff;
@@ -2049,6 +2056,7 @@ table .center {text-align: center;}
 	text-align: center;
 }
 .btn-price{position: relative;}
+.btn-price:hover .price-list {display: block;}
 .price-list {
 	position: absolute;
 	width: 120px;

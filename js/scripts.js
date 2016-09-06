@@ -15,19 +15,7 @@ window.onload = function() {
     }
     // ----------------------首页---------------
 $(function() {
-    // 头部个人中心,购物车,手机批发页面价格高低 hover
-    $('.user-nav').add('.cart-container').add('.btn-price').hover(function() {
-        $(this).find('.js-hover').show();
-    }, function() {
-        $('.js-hover').hide();
-    });
 
-    // 移动业务
-    $('.mobile-charge').hover(function() {
-            $(this).find('.mobile-charge-list').show();
-        }, function() {
-            $(this).find('.mobile-charge-list').hide();
-        })
         //分享
     $('.share-container').hover(function() {
         $('.share-type').fadeIn(500);
@@ -175,12 +163,6 @@ $(function() {
     // ---------------------------购物车页面--结束---------------------
 
     // ----------手机批发页面------------、
-    // 搜索框选择
-    $('.select-goods').hover(function() {
-        $(this).find('.goods-list').show();
-    }, function() {
-        $(this).find('.goods-list').hide();
-    });
 
     // 手机通讯，手机配件
     $('.sort-title').find('a').click(function(){
