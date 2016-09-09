@@ -888,6 +888,10 @@ overflow: hidden;
 	height: 400px;
 	overflow-y: auto;
 }
+.dialog-content p {
+	padding: 20px;
+	line-height: 24px;
+}
 .confirm-container {
 	width: 340px;
 	height: 124px;
@@ -928,7 +932,10 @@ overflow: hidden;
 .order-info span{
 	color: #666;
 }
-
+.print-order {
+	width: 920px;
+	margin: 20px auto;
+}
 /*商品明细*/
 .product-detail {
 	margin: 20px;
@@ -959,6 +966,11 @@ overflow: hidden;
 	border-bottom: 1px solid #e0e3e6;
 }
 .pro-text{width: 250px;}
+
+.btn-print {
+	float: right;
+	margin: 20px;
+}
 
 /*--分页--*/
 .page-conteiner {
@@ -1256,11 +1268,13 @@ img.ad-img {width: 280px;}
     box-sizing: border-box;
     width: 120px;
 }
-.input-text span{
-	line-height: 40px;
-	font-size: 20px;
+.input-checkbox {
+	margin-bottom: 10px;
+	display: block;
+	color: #999;
+	cursor: pointer;
+	margin-left: 80px;
 }
-
 .input-text {
 	display: inline-block;
 	position: relative;
@@ -1428,6 +1442,7 @@ input.text2 {width: 400px;}
 	line-height: 80px;
 	padding-right: 20px;
 	float: right;
+	cursor: pointer;
 }
 .brokerage-rule .help {
 	color: #fff;
@@ -2137,6 +2152,14 @@ table .center {text-align: center;}
     margin: 20px;
     box-sizing: border-box;
 }
+.bank-table {
+	margin-left: 80px;
+	width: 560px;
+}
+.bank-table td{
+	border: 1px solid #D2D5D8;
+	padding: 20px 30px;
+}
 /*---------------注册页面-------------*/
 .border-bottom{border-bottom: 1px solid #e0e3e6;}
 .register-form {
@@ -2153,7 +2176,23 @@ table .center {text-align: center;}
 }
 .footer-2 a{color: #999;}
 .bot-nav-2 {font-size: 12px;}
-
+.protocol-content {
+	height: 320px;
+	overflow-y: auto;
+	color: #999;
+}
+.protocol-content h4{
+	padding: 0 20px;
+	margin-bottom: -14px;
+	color: #333;
+}
+.btn-aggree {
+	margin: 10px auto;
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fc8158;
+}
 /*--------------登录页面------------*/
 .login-banner {
 	width: 100%;

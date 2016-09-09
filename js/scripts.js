@@ -37,10 +37,10 @@ $(function() {
         }
     });
 
-    //信息弹窗(添加收货地址，编辑地址，添加收货地址，表单查看详情)
-    $('.add-addr-info').add('.tab-edit').add('.btn-add-address').add('.detail-info').click(function() {
+    //信息弹窗(添加收货地址，编辑地址，添加收货地址，表单查看详情，注册页面协议，佣金规则弹窗)
+    $('.add-addr-info').add('.tab-edit').add('.btn-add-address').add('.detail-info').add('.btn-protocol').add('.brokerage-rule').click(function() {
         $('.ui-dialog').addClass('show');
-        $('.ui-dialog').find('.icon-error').click(function() {
+        $('.ui-dialog').find('.icon-error').add('.btn-aggree').click(function() {
             $('.ui-dialog').removeClass('show');
         })
     });

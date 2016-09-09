@@ -6,6 +6,7 @@
 
 我的订单-充值订单：order_recharge.html
 我的订单-批发订单：order_wholesale.html
+打印订单详情：print_order.html
 往来对账单：statement.html
 我的资料：my_data.html
 我的佣金：my_brokerage.html
@@ -30,6 +31,7 @@
 
 流量充值： flow_charging.html
 流量批量充值：batch_flow_charging.html
+4G套餐：four_G_combo.html
 
 -----余额充值---balance_recharge.html
 
