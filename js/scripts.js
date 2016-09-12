@@ -7,11 +7,11 @@ window.onload = function() {
         }
 
         // ------------左右高度一致---------
-        var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
-        var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
-        var mh = Math.max(hl, hr); //比较hl与hr的高度，并将最大值赋给变量mh
-        $(".left-nav-2").height(mh); //将left层高度设为最大高度mh  
-        $(".charge-container").height(mh); //将right层高度设为最大高度
+        // var hl = $(".left-nav-2").outerHeight(); //获取左侧left层的高度 
+        // var hr = $(".charge-container").outerHeight(); //获取右侧right层的高度  
+        // var mh = Math.max(hl, hr); //比较hl与hr的高度，并将最大值赋给变量mh
+        // $(".left-nav-2").height(mh); //将left层高度设为最大高度mh  
+        // $(".charge-container").height(mh); //将right层高度设为最大高度
     }
     // ----------------------首页---------------
 $(function() {

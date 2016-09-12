@@ -80,7 +80,9 @@ overflow: hidden;
 .m-top{
 	background-color: #fff;
 }
-.logo-text{
+.logo-tex
+<html>
+t{
 	height: 80px;
 	line-height: 80px;
 }
@@ -189,7 +191,7 @@ overflow: hidden;
 	top: 38px;
 	bottom: 0;
 	width: 240px;
-	height: 250px;
+	height: 290px;
 	background-color: #fff;
 	filter: Alpha(opacity=90);
 	background-color: rgba(255,255,255,.9);
@@ -858,7 +860,7 @@ overflow: hidden;
 .dialog-container {
 	position: absolute;
 	width: 860px;
-	height: 460px;
+	height: 560px;
 	left: 50%;
 	margin-left: -430px;
 	margin-top: 100px;
@@ -885,7 +887,16 @@ overflow: hidden;
 	cursor: pointer;
 }
 .dialog-content{
-	height: 400px;
+	height: 500px;
+	overflow-y: auto;
+}
+.dialog-content .btn-print {
+	position: absolute;
+	bottom: 10px;
+	right: 40px;
+}
+.order-detail {
+	height: 450px;
 	overflow-y: auto;
 }
 .dialog-content p {
@@ -904,6 +915,10 @@ overflow: hidden;
 	padding: 20px;
 	line-height: 22px;
 	box-sizing: border-box;
+}
+.print-order .btn-print{
+	float: right;
+	margin: 20px;
 }
 .two-btn .btn{
 	display: inline-block;
@@ -967,11 +982,11 @@ overflow: hidden;
 }
 .pro-text{width: 250px;}
 
-.btn-print {
+/*.btn-print {
 	float: right;
 	margin: 20px;
 }
-
+*/
 /*--分页--*/
 .page-conteiner {
 	margin: 45px 0;
@@ -1460,6 +1475,7 @@ input.text2 {width: 400px;}
 	background-color: #e9ebee;
 	margin-top: 30px;
 	border: 1px solid #e0e3e6;
+	overflow: hidden;
 }
 
 .left-nav-2 li a{
@@ -1487,7 +1503,7 @@ input.text2 {width: 400px;}
 	float: left;
 	background-color: #fff;
 	width: 1020px;
-	height: 100%;
+	min-height: 480px;
 }
 .charge-container .title-bar{
 	height: 80px;
@@ -1517,6 +1533,7 @@ input.text2 {width: 400px;}
 	display: inline-block;
 	width: 570px;
 	position: relative;
+	clear: both;
 }
 .select-box li {
 	height: 38px;
